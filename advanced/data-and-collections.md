@@ -34,7 +34,7 @@ Example:
 
 If you want to have a large set of items in separate files that can also generate their own separate pages on your site, use [collections](https://jekyllrb.com/docs/collections).&#x20;
 
-Put `.md` files in a folder prefixed with a `_`, and fill their [front matters](../how-tos/edit-pages.md#edit-page-details) with data. To generate a separate page for each item in the collection, set `output: true` in your config file [as described here](https://jekyllrb.com/docs/collections).
+Put `.md` files in a folder prefixed with a `_`, and fill their [front matters](../how-to/edit-pages.md#edit-page-details) with data. To generate a separate page for each item in the collection, set `output: true` in your config file [as described here](https://jekyllrb.com/docs/collections).
 
 Example:
 

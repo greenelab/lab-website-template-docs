@@ -16,10 +16,9 @@ Once you decide which approach to take, follow the appropriate setup steps below
    1. Name your repo something like `your-lab-website` to avoid confusion with the template itself.
    2. Set the repo to "Public" visibility.
    3. Uncheck "Include all branches".
-2. In your repo's "[⚙️](https://emojipedia.org/gear/) Settings", find [Actions workflow permissions](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/enabling-features-for-your-repository/managing-github-actions-settings-for-a-repository#configuring-the-default-github\_token-permissions) and set it to "Read and write permissions".
-3. In your repo's "[▶️](https://emojipedia.org/play-button/) Actions", find the "first time setup" workflow and [run it manually](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow). Wait for it to complete (\~30 seconds).
-4. In your repo's "[⚙️](https://emojipedia.org/gear/) Settings", [set GitHub Pages to build/publish from](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) the `gh-pages` branch. Wait for the first build of your site to complete (\~3 minutes, multiple Actions workflows will run).
-5. Your repo should be initialized and your site should be live! Check your readme for the link.
+2. In your repo's "[▶️](https://emojipedia.org/play-button/) Actions", find the "first time setup" workflow and [run it manually](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow). Wait for it to complete (\~30 seconds).
+3. In your repo's "[⚙️](https://emojipedia.org/gear/) Settings", [set GitHub Pages to build/publish from](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) the `gh-pages` branch. Wait for the first build of your site to complete (\~3 minutes, multiple Actions workflows will run).
+4. Your repo should be initialized and your site should be live! Check your readme for the link.
 {% endtab %}
 
 {% tab title="Fork" %}

@@ -2,11 +2,27 @@
 description: How to write basic content for your site in Markdown
 ---
 
-# Basic content
+# Write basic content
 
-[👁️ Preview result](https://lab-website-template.netlify.app/testbed#basic-formatting)
+[Markdown](https://commonmark.org/help/) is a way to write basic text content and formatting in a clean and simple way. Markdown `.md` files are plain text files that get converted into pages on your resulting website.
 
-**Basic text styles**
+[👁️ Preview](https://lab-website-template.netlify.app/testbed#basic-formatting)
+
+## Note about links
+
+Unless noted otherwise, all links to pages/images/etc. in the template can be absolute or relative. This applies to Markdown files, entries in `/_data` files, Markdown file front matters, [component](use-components.md) parameters, etc.
+
+Examples:
+
+|                           |                                                                   |
+| ------------------------- | ----------------------------------------------------------------- |
+| `https://google.com/`     | Absolute link to an external site.                                |
+| `doggo.jpg`               | Relative link to an image in the current folder.                  |
+| `../doggo.jpg`            | Relative link to an image in the folder above the current folder. |
+| `team/group-photo.jpg`    | Relative link to an image in a sub-folder of the current folder.  |
+| `/images/group-photo.jpg` | Link to an image in a sub-folder, relative to the root folder.    |
+
+## **Basic text styles**
 
 ```markdown
 _italic text_
@@ -20,7 +36,7 @@ _italic text_
 ~~strike-through text~~
 ```
 
-**Line breaks**
+## **Line breaks**
 
 ```html
 <br>
@@ -30,7 +46,7 @@ Text with extra blank lines above and below
 <br>
 ```
 
-**Comments**
+## **Comments**
 
 ```markdown
 <!-- a comment in HTML -->
@@ -42,7 +58,7 @@ A comment in Liquid
 {% endraw %}
 ```
 
-**Lists**
+## **Lists**
 
 ```markdown
 - list item a
@@ -56,7 +72,7 @@ A comment in Liquid
 3. ordered list item 3
 ```
 
-**Links**
+## **Links**
 
 ```markdown
 External link:
@@ -66,11 +82,7 @@ Link to a page within your site:
 [Meet our team!](team)
 ```
 
-{% hint style="info" %}
-Unless noted otherwise, all links (in `/_data` files, `.md` files, [components](use-components.md), etc.) can be absolute links (e.g. `https://google.com/`) or relative links to items within your repo (e.g. `images/group-photo.jpg`).
-{% endhint %}
-
-**Centered element**
+## **Centered element**
 
 ```markdown
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -80,7 +92,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 
 Most things in the template are centered by default where appropriate. But sometimes you may need to attach this `center` utility class to an element to center it. Depending on what you're trying to center, the `{:.center}` code may have to go on the same line or on the next line.
 
-**Headings**
+## **Headings**
 
 ```markdown
 # Top level heading
@@ -89,13 +101,13 @@ Most things in the template are centered by default where appropriate. But somet
 #### Even more specific heading
 ```
 
-**Horizontal rule**
+## **Horizontal rule**
 
 ```markdown
 ---
 ```
 
-**Table**
+## **Table**
 
 With left-aligned, centered, and right-aligned columns.
 
@@ -107,7 +119,7 @@ With left-aligned, centered, and right-aligned columns.
 | Cara  |  102   |  214   |  233   |  549  |
 ```
 
-**Block quote**
+## **Block quote**
 
 ```markdown
 > It was the best of times it was the worst of times.
@@ -115,7 +127,7 @@ With left-aligned, centered, and right-aligned columns.
 > It was the spring of hope, it was the winter of despair.
 ```
 
-**Code block**
+## **Code block**
 
 With syntax highlighting.
 
@@ -128,7 +140,7 @@ popup.innerText = "Lorem ipsum dolor sit amet.";
 ```
 ````
 
-**Inline code**
+## **Inline code**
 
 ```markdown
 This sentence has `inline code`, useful for making references to variables, packages, versions, etc. within a sentence.

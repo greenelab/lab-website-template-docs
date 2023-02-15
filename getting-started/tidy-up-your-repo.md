@@ -4,7 +4,7 @@ description: Optional tidying up
 
 # Tidy up your repo
 
-The following is not needed for the template to work, but is recommended to provide the cleanest experience for the maintainers and editors of your site. Much of this is just disabling unneeded features that GitHub enables by default to declutter the web interface.
+The following is recommended to provide the cleanest experience for the maintainers and editors of your site. Much of this is just disabling unneeded features that GitHub enables by default to declutter the web interface.
 
 * On the main page of your repo, click the [⚙️](https://emojipedia.org/gear/) next to "About".
   * Enter a short description, like "Website source code repo for the Greene Lab".

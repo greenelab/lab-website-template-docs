@@ -9,7 +9,7 @@ Developed by the [Greene Lab](https://greenelab.com/).
 ## Key Features
 
 * [🤖](https://emojipedia.org/robot/) Based on Git, GitHub, and Jekyll_._
-* [📜](https://emojipedia.org/scroll/) [Automatically generated citations from simple identifiers](how-tos/citations.md) (DOI, PubMed, ORCID, and many more) using [Manubot](https://manubot.org/). E.g. `doi:1234/5678` -> title, authors, publisher, date, etc.
+* [📜](https://emojipedia.org/scroll/) [Automatically generated citations from simple identifiers](how-to/citations.md) (DOI, PubMed, ORCID, and many more) using [Manubot](https://manubot.org/). E.g. `doi:1234/5678` -> title, authors, publisher, date, etc.
 * [🧱](https://emojipedia.org/brick/) A comprehensive and flexible suite of pre-made components (building blocks) for structuring and styling your website the way you want it:
   * Formatted tables, code blocks, figures, and other basic elements.
   * Citations with thumbnails and other rich details.

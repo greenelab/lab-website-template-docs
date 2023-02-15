@@ -13,18 +13,19 @@
 * [Set up your URL](getting-started/set-up-your-url.md)
 * [Tidy up your repo](getting-started/tidy-up-your-repo.md)
 * [Edit your site](getting-started/edit-your-site.md)
+* [Repo structure](getting-started/repo-structure.md)
 
-## How tos
+## How to
 
-* [Site settings](how-tos/site-settings.md)
-* [Use your logo](how-tos/use-your-logo.md)
-* [Basic content](how-tos/basic-content.md)
-* [Edit pages](how-tos/edit-pages.md)
-* [Customize your theme](how-tos/customize-your-theme.md)
-* [Images](how-tos/images.md)
-* [Citations](how-tos/citations.md)
-* [Use components](how-tos/use-components.md)
-* [Math, diagrams, etc.](how-tos/math-diagrams-etc..md)
+* [Configure your site](how-to/configure-your-site.md)
+* [Use your logo](how-to/use-your-logo.md)
+* [Write basic content](how-to/write-basic-content.md)
+* [Edit pages](how-to/edit-pages.md)
+* [Customize your theme](how-to/customize-your-theme.md)
+* [Use components](how-to/use-components.md)
+* [Citations](how-to/citations.md)
+* [Team members](how-to/team-members.md)
+* [Blog posts](how-to/blog-posts.md)
 
 ## Components
 
@@ -35,8 +36,10 @@
 ## Advanced
 
 * [Background knowledge](advanced/background-knowledge.md)
-* [Repo structure](advanced/repo-structure.md)
+* [Math, diagrams, etc.](advanced/math-diagrams-etc..md)
 * [Data and collections](advanced/data-and-collections.md)
 * [Comments section](advanced/comments-section.md)
 * [Update your template](advanced/update-your-template.md)
 * [Jekyll plugins](advanced/jekyll-plugins.md)
+* [Analytics](advanced/analytics.md)
+* [Custom component](advanced/custom-component.md)

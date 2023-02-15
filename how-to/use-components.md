@@ -1,10 +1,10 @@
 ---
-description: How to write complex content for your site with components
+description: How to write fancier content for your site with components
 ---
 
 # Use components
 
-Markdown is meant for authoring [basic content](basic-content.md) in a quick and intuitive way, but sometimes you need something more complex. **Components** are building blocks for visual and interactive elements on your site. Some people/services call them "widgets".
+Markdown is meant for [basic content](write-basic-content.md), but sometimes you need something more. **Components** are building blocks for visual and interactive elements on your site. You can also think of them as "widgets".
 
 The template comes with many pre-made components so you can assemble your website however you want with ease.&#x20;
 

@@ -1,9 +1,15 @@
 # Update your template
 
-If the template [has been updated](https://github.com/greenelab/lab-website-template/commits/main) since you first created your website from it, you may want to pull in the updates.&#x20;
+If the template has been updated since you first created your website from it, you may want to pull in the updates.&#x20;
+
+[📋 TEMPLATE CHANGELOG](https://github.com/greenelab/lab-website-template/blob/main/CHANGELOG.md)
 
 {% hint style="info" %}
 Because this is a template, and not a cleanly-separated installable package, updating it can unfortunately be a little difficult. We can [help you](../introduction/support.md) if you have trouble.
+{% endhint %}
+
+{% hint style="info" %}
+If you are coming from a pre-release version of the template, it may be easier and less error-prone to just start from scratch. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site to your new site. We know this might be frustrating, but we think upgrading is worth it.
 {% endhint %}
 
 ## Begin a merge
@@ -41,15 +47,9 @@ If you **forked** your website, the process should be a little bit easier, but y
 
 We'll assume you already know how to [perform a merge conflict resolution in your Git interface of choice](https://code.visualstudio.com/docs/sourcecontrol/overview#\_merge-conflicts).&#x20;
 
-The hard part is carefully picking out which changes to accept. This essentially boils down to distinguishing between **template code** ("under-the-hood") and **content code** (for your specific website). For template code, you want to "accept incoming changes" (pull in updates from the template). For content code, you want to "accept current changes" (keep the current content in your repo).
+The hard part is carefully picking out which changes to accept. This essentially boils down to distinguishing between [template content and user content](../getting-started/repo-structure.md). For template content, you want to "accept incoming changes" (pull in updates from the template). For user content, you want to "accept current changes" (keep the current content in your repo).
 
-**In general**, here's how the files and folders in the template fall into these two categories. We've tried to keep these two separated in the [repo structure](repo-structure.md) as possible (within the limitations of Jekyll). Note that if you've made modifications to template code (e.g. tweaking the appearance of a component), you'll have to judiciously decide where and how to merge in the updates.
-
-| Template code                                                                                                             | Content code                                                                                                                |
-| ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Folders that start with `_` ...except for :point\_right:                                                                  | <p><code>/_data</code> </p><p><code>/_members</code> </p><p><code>/_posts</code></p><p><code>/_styles/theme.scss</code></p> |
-| Folders that start with `.`                                                                                               |                                                                                                                             |
-| <p><code>CITATION.cff</code></p><p><code>LICENSE.md</code></p><p><code>Gemfile</code></p><p><code>Gemfile.lock</code></p> | <p><code>/blog</code><br><code>/images</code><br><code>/team</code><br>etc.<br><code>index.md</code></p>                    |
+Note that if you've made modifications to template code (e.g. tweaking the appearance of a component), you'll have to judiciously decide how or if to merge in the updates.
 
 {% hint style="warning" %}
 This process is very tricky, even for the maintainers of this template. When doing this, carefully check every page and section on your site before publishing the changes.

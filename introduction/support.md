@@ -6,7 +6,7 @@
 Community support is very important to us. Verify for yourself in our [issues](https://github.com/greenelab/lab-website-template/issues?q=is%3Aissue+is%3Aclosed) and [discussions](https://github.com/greenelab/lab-website-template/discussions?discussions\_q=is%3Aanswered) by looking at response times.
 {% endhint %}
 
-## Supported Browsers
+## Supported browsers
 
 The template is regularly tested on the following:
 

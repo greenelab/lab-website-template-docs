@@ -5,7 +5,7 @@ There are two main ways you can make changes to your site, each with benefits an
 {% hint style="info" %}
 For most content on your site, you just need change the contents of the appropriate file.
 
-Citations have a special additional step. When you add new sources or authors to be cited, the template has to [run a special process to generate your full citations](../how-to/citations.md). We call this the **cite process**.
+Citations have a special additional step. When you add new sources or metasources (authors) to be cited, the template has to [run a special process to generate your full citations](../basics/citations.md).
 {% endhint %}
 
 ## On GitHub (remotely)
@@ -22,12 +22,12 @@ In pull requests, the template will build a live preview of the changes you are 
 
 ### Citations
 
-For your convenience, the template tells GitHub to run the cite process and commit the result whenever you push to `main` or make a pull request.
+For your convenience, the template tells GitHub to run the [cite process](edit-your-site.md#citations) and commit the result whenever you push to `main` or make a pull request.
 
 If you're doing a pull request from a fork, make sure "[Allow edits from maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)" is checked in your pull request so the cite process has permission to commit its results.
 
 {% hint style="warning" %}
-Due to an [unfortunate GitHub limitation](https://github.com/orgs/community/discussions/5634), if you're making changes via a fork from an _organization_, you wont see the "allow edits" option and the cite process wont work. You'll have to make changes from a branch instead, or run the cite process locally.
+Due to an [unfortunate GitHub limitation](https://github.com/orgs/community/discussions/5634), if you're making changes from a fork under an _organization_, you wont see the "allow edits" option and the cite process wont work. You'll have to make changes from a branch instead, or run the cite process locally.
 {% endhint %}
 
 ## On your computer (locally)
@@ -45,7 +45,7 @@ This approach requires experience with Git, but is better for when you're doing 
 2. [Clone](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository) the appropriate repo to your computer and switch to the appropriate branch.
 3. Edit the cloned site on your computer with your favorite [text/code editor](https://code.visualstudio.com/).
 4. Commit and push the changes.
-5. If working from a branch, make a pull request to your main website repo and merge when ready to publish.
+5. If working from a branch or fork, make a pull request to your main website repo and merge when ready to publish.
 
 ### Previewing
 
@@ -70,7 +70,7 @@ Building your site is (surprisingly) not deterministic, because some of the pre-
 
 ### Citations
 
-To run the cite process locally:
+To run the [cite process](../basics/citations.md) locally:
 
 1. [Install Python](https://www.python.org/downloads/) (with PIP).
 2. Go to the folder where you cloned your site, e.g. `cd your-lab-website`.

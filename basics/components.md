@@ -2,15 +2,13 @@
 description: How to write fancier content for your site with components
 ---
 
-# Use components
+# Components
 
-Markdown is meant for [basic content](write-basic-content.md), but sometimes you need something more. **Components** are building blocks for visual and interactive elements on your site. You can also think of them as "widgets".
+Markdown is meant for [basic content](write-basic-content.md), but sometimes you need something more. **Components** are building blocks for more complex visual and interactive elements on your site. You can also think of them as "widgets".
 
-The template comes with many pre-made components so you can assemble your website however you want with ease.&#x20;
+The template comes with many pre-made components so you can assemble your website however you want with ease. **See a list of all the components you can use in the side menu.**
 
-{% hint style="success" %}
-**See a list of all the components you can use in the side menu.**
-{% endhint %}
+## Example
 
 Simply place the code for a component in one of your markdown files, and it will appear in your site. The basic syntax for including a component is:
 

@@ -9,7 +9,7 @@ Because this is a template, and not a cleanly-separated installable package, upd
 {% endhint %}
 
 {% hint style="info" %}
-If you are coming from a pre-release version of the template, it may be easier and less error-prone to just start from scratch. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site to your new site. We know this might be frustrating, but we think upgrading is worth it.
+If you are coming from a pre-release version of the template, it may be easier and less error-prone to just start from scratch. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site to your new site. We know this is frustrating, but we think the upgrade is worth it.
 {% endhint %}
 
 ## Begin a merge
@@ -47,7 +47,7 @@ If you **forked** your website, the process should be a little bit easier, but y
 
 We'll assume you already know how to [perform a merge conflict resolution in your Git interface of choice](https://code.visualstudio.com/docs/sourcecontrol/overview#\_merge-conflicts).&#x20;
 
-The hard part is carefully picking out which changes to accept. This essentially boils down to distinguishing between [template content and user content](../getting-started/repo-structure.md). For template content, you want to "accept incoming changes" (pull in updates from the template). For user content, you want to "accept current changes" (keep the current content in your repo).
+The hard part is carefully picking out which changes to accept. This essentially boils down to distinguishing between [template content and user content](../basics/repo-structure.md). For template content, you want to "accept incoming changes" (pull in updates from the template). For user content, you want to "accept current changes" (keep the current content in your repo).
 
 Note that if you've made modifications to template code (e.g. tweaking the appearance of a component), you'll have to judiciously decide how or if to merge in the updates.
 

@@ -13,33 +13,38 @@
 * [Set up your URL](getting-started/set-up-your-url.md)
 * [Tidy up your repo](getting-started/tidy-up-your-repo.md)
 * [Edit your site](getting-started/edit-your-site.md)
-* [Repo structure](getting-started/repo-structure.md)
 
-## How to
+## Basics
 
-* [Configure your site](how-to/configure-your-site.md)
-* [Use your logo](how-to/use-your-logo.md)
-* [Write basic content](how-to/write-basic-content.md)
-* [Edit pages](how-to/edit-pages.md)
-* [Customize your theme](how-to/customize-your-theme.md)
-* [Use components](how-to/use-components.md)
-* [Citations](how-to/citations.md)
-* [Team members](how-to/team-members.md)
-* [Blog posts](how-to/blog-posts.md)
+* [Repo structure](basics/repo-structure.md)
+* [Configure your site](basics/configure-your-site.md)
+* [Edit pages](basics/edit-pages.md)
+* [Write basic content](basics/write-basic-content.md)
+* [Use your logo](basics/use-your-logo.md)
+* [Customize your theme](basics/customize-your-theme.md)
+* [Components](basics/components.md)
+* [Team members](basics/team-members.md)
+* [Blog posts](basics/blog-posts.md)
+* [Citations](basics/citations.md)
 
 ## Components
 
 * [Figure](components/figure.md)
 * [Section](components/section.md)
 * [List](components/list.md)
+* [Button](components/button.md)
+* [Portrait](components/portrait.md)
+* [Post Excerpt](components/post-excerpt.md)
+* [Citation](components/citation.md)
+* [Tags](components/tags.md)
 
 ## Advanced
 
+* [Troubleshooting](advanced/troubleshooting.md)
 * [Background knowledge](advanced/background-knowledge.md)
 * [Math, diagrams, etc.](advanced/math-diagrams-etc..md)
 * [Data and collections](advanced/data-and-collections.md)
-* [Comments section](advanced/comments-section.md)
 * [Update your template](advanced/update-your-template.md)
 * [Jekyll plugins](advanced/jekyll-plugins.md)
+* [Embeds](advanced/embeds.md)
 * [Analytics](advanced/analytics.md)
-* [Custom component](advanced/custom-component.md)

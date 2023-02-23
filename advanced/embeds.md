@@ -1,4 +1,13 @@
-# Comments section
+# Embeds
+
+The template is extendable with regular web-based plugins and libraries. If you find a library that is based on HTML/CSS/JS, you can probably use it in the template.
+
+* Twitter timeline
+* JavaScript calendar library
+* JavaScript image carousel library
+* [GitHub stats cards](https://github.com/anuraghazra/github-readme-stats)
+
+## Comments section
 
 Having comments on blog posts (or elsewhere) isn't a trivial feature to implement. There needs to be 1) a plugin on the page that lets users log in, read comments, and post new ones, and 2) a server running to receive, permanently store, and retrieve comments.
 

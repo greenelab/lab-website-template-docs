@@ -1,6 +1,6 @@
 # Set up your URL
 
-GitHub Pages gives you a few options for where your live site appears:
+GitHub Pages gives you [a few options](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites) for where your live site appears:
 
 {% tabs %}
 {% tab title="Custom Domain (recommended)" %}
@@ -33,3 +33,7 @@ This is where your live site appears by default when you enable GitHub Pages.
 {% endtabs %}
 
 After making any needed changes above, wait a bit (\~30 seconds to 3 minutes) for your live site to redeploy to its new location. (You can check your repo's "[▶️](https://emojipedia.org/play-button/) Actions" for status.)
+
+{% hint style="info" %}
+A lot of the automation in this template relies on GitHub Actions, which sometimes (very rarely) [goes down](https://www.githubstatus.com/).
+{% endhint %}

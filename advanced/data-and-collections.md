@@ -2,15 +2,22 @@
 
 Jekyll provides two main ways to create and maintain large lists/sets of items: **data** and **collections**.&#x20;
 
-The template already includes a few of these for commonly needed things: tools, sources, team members, and blog posts. But if you need to create more/different ones, here's how.
+The template already includes a few of these for commonly needed things:
+
+* Projects
+* Sources and ORCID (for [citations](../basics/citations.md))
+* Team members
+* Blog posts
+
+But if you need to create more/different ones, here's how.
 
 {% hint style="info" %}
-This page just explains how to create these lists. To then actually display them on your site, use the [list component](../components/list.md).
+This page just explains how to create these lists. To actually display them on your site, use the [list component](../basics/components/list.md).
 {% endhint %}
 
 ## **Data**
 
-If you want to have a large set of structured or nested items in a single file, use [data files](https://jekyllrb.com/docs/datafiles/).
+If you want to have a large set of structured or nested items in a single file, use a [data file](https://jekyllrb.com/docs/datafiles/).
 
 Put a `.yaml` file in the `/_data` folder with any name, and fill it with data. The structure of the data can be arbitrary.
 

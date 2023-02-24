@@ -7,7 +7,7 @@ To add or remove a team member, create or delete a Markdown file in `/_members`.
 Each file will automatically generate its own page according to its filename. For example, a file with the name `tim-member.md` will generate a page at `/members/tim-member`.
 
 {% hint style="info" %}
-After adding members, you can display them on your site with the [list](../components/list.md) and [portrait](../components/portrait.md) components.
+After adding members, you can display them on your site with the [list](components/list.md) and [portrait](components/portrait.md) components.
 {% endhint %}
 
 Example:
@@ -34,8 +34,6 @@ A descriptions of his academic studies, his recent accomplishments, his goals fo
 One or two paragraphs is probably best.
 ```
 {% endcode %}
-
-#### Parameters
 
 | Parameter     | Description                                                                                                                                                                                                                     |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

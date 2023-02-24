@@ -61,7 +61,7 @@ Jekyll automatically prepends the right baseurl
 
 <summary>Data, front-matter, components</summary>
 
-Specifying URLs in `/_data` files, front matters, [component](components.md) parameters, etc. works differently than it does in Markdown content. The link to the page/image/etc. **must be relative to the root of your repo**. You cannot refer to files relative to the current file, or use the `..` to move up folders.
+Specifying URLs in `/_data` files, front matters, [component](components/) parameters, etc. works differently than it does in Markdown content. The link to the page/image/etc. **must be relative to the root of your repo**. You cannot refer to files relative to the current file, or use the `..` to move up folders.
 
 ```yaml
 - image: images/photo.jpg

@@ -1,3 +1,0 @@
-# List
-
-An important component.

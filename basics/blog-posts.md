@@ -7,7 +7,7 @@ To add or remove a blog post, create or delete a Markdown file in `/_posts`.  Th
 Each file will automatically generate its own page based on its filename.
 
 {% hint style="info" %}
-After adding post, you can display them on your site with the [list](../components/list.md) and [post excerpt](../components/post-excerpt.md) components.
+After adding post, you can display them on your site with the [list](components/list.md) and [post excerpt](components/post-excerpt.md) components.
 {% endhint %}
 
 Example:
@@ -30,10 +30,10 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ```
 
-| Parameter                                                                                                    | Description                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title`                                                                                                      | Title of post.                                                                                                                                                                                                                                              |
-| `author`                                                                                                     | Filename of author's team member page (without the extension). If found, the portrait and name of the member is displayed automatically. If not found, the template assumes you provided a raw name to display, e.g. "Tim Member".                          |
-| `tags`                                                                                                       | List of topics/themes for post.                                                                                                                                                                                                                             |
-| <p><code>&#x3C;!-- excerpt start/end --></code> in body<br>OR</p><p><code>excerpt</code> in front matter</p> | Manually specify what should be used as the excerpt (preview of post content) when displaying the post with the [post excerpt](../components/post-excerpt.md) component. [Defaults to the first paragraph](https://jekyllrb.com/docs/posts/#post-excerpts). |
+| Parameter                                                                                                    | Description                                                                                                                                                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title`                                                                                                      | Title of post.                                                                                                                                                                                                                                           |
+| `author`                                                                                                     | Filename of author's team member page (without the extension). If found, the portrait and name of the member is displayed automatically. If not found, the template assumes you provided a raw name to display, e.g. "Tim Member".                       |
+| `tags`                                                                                                       | List of topics/themes for post.                                                                                                                                                                                                                          |
+| <p><code>&#x3C;!-- excerpt start/end --></code> in body<br>OR</p><p><code>excerpt</code> in front matter</p> | Manually specify what should be used as the excerpt (preview of post content) when displaying the post with the [post excerpt](components/post-excerpt.md) component. [Defaults to the first paragraph](https://jekyllrb.com/docs/posts/#post-excerpts). |
 

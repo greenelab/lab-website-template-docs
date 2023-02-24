@@ -12,7 +12,7 @@ Lab Website Template on GitHub
 
 * [🤖](https://emojipedia.org/robot/) Based on Git, GitHub, and Jekyll_._
 * [📜](https://emojipedia.org/scroll/) [Automatically generated citations from simple identifiers](basics/citations.md) (DOI, PubMed, ORCID, and many more) using [Manubot](https://manubot.org/). E.g. `doi:1234/5678` -> title, authors, publisher, date, etc.
-* [🧱](https://emojipedia.org/brick/) A comprehensive and flexible suite of pre-made [components](basics/components.md) (building blocks) for structuring and styling your website:
+* [🧱](https://emojipedia.org/brick/) A comprehensive and flexible suite of pre-made [components](basics/components/) (building blocks) for structuring and styling your website:
   * Formatted tables, code blocks, figures, and other basic elements.
   * Citations with thumbnails and other rich details.
   * List large sets of data with flexible filters and components.

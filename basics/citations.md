@@ -1,12 +1,10 @@
 # Citations
 
-Arguably the most important feature of this template is its ability to automatically generate citations from simple identifiers.&#x20;
+Arguably the most important feature of this template is its ability to automatically generate citations from simple identifiers, making it easy to cite and maintain large lists of publications.
 
-The template is able to do this thanks to [**Manubot**](https://github.com/manubot/manubot#cite)**:**
+The template is able to do this thanks to [**Manubot**](https://github.com/manubot/manubot#cite)**,** a suite of tools that (among many other things) lets you automatically generate a citation with full details from just a short identifier, like `doi`, `url`, `isbn`, `pmc`, `pmcid`, `pubmed`, `arxiv`, and [many many more](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155).
 
 {% embed url="https://manubot.org/" %}
-Manubot is a suite of tools that (among many other things) lets you automatically generate a citation with full details from just a short identifier, like `doi`, `url`, `isbn`, `pmc`, `pmcid`, `pubmed`, `arxiv`, and [many many more](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155).
-{% endembed %}
 
 ## Introduction
 
@@ -15,30 +13,43 @@ First let's define some consistent terminology to make things easier to explain:
 * **source** - A paper, book, article, web page, film, or any other published item you want to cite.
 * **metasource** - A single item that lists multiple sources, like how an author's [ORCID number](https://orcid.org/) can be used to get a list of their published works.
 * **citation** - Detailed information about a source, like author(s), publisher, publish date, url, issue number, journal, etc.
-* **cite process** - The automatic process the template has to run to convert your sources and metasources to citations.
 
-{% hint style="info" %}
-After running the cite process, you can **display** and **filter** **citations** on your site with the [list](../components/list.md) and [citation](../components/citation.md) components.
-{% endhint %}
+You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like!
+
+For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few curated papers by various members in your lab that you want to highlight.
+
+Or, you may want to forgo any kind of metasource and just have a small handful of manually selected sources to display on your homepage.
 
 ## How it works
 
-1. In `/_data`, create as many source and metasource input `.yaml` files as you need, with the appropriate filename prefixes, e.g. `sources-2020.yaml`, `orcid-students.yaml`, etc.\
-   _See filenames of examples below._
-2. The cite process starts.
-3. Each source/metasource file gets processed with the appropriate "cite plugin".
-4. Metasource plugins like ORCID expand each entry the file into a list of regular sources.
-5. A master list of sources is compiled, with duplicates removed (matched by `id`).
-6. Manubot generates full citation details for each source.
-7. A single `citations.yaml` file is generated to `/_data`.
-8. The cite process finishes.
-9. You **display** and **filter** **citations** on your site with the [list](../components/list.md) and [citation](../components/citation.md) components.
+{% hint style="info" %}
+Diagram coming soon
+{% endhint %}
 
-See examples below for filenames and behaviors of each cite plugin.
+At a high level, here's how automatic citations work:
+
+1. Input your sources and metasources in `/_data` files, e.g. `sources-2020.yaml`, `orcid-students.yaml`, etc.
+2. Run the **cite process** – either [automatically (on GitHub)](../getting-started/edit-your-site.md#citations) or [manually (locally)](../getting-started/edit-your-site.md#citations-1) – to convert your sources and metasources to full citations.
+3. The cite process outputs a single `citations.yaml` file in `/_data`.
+4. Display and filter citations on your site with the [list](components/list.md) and [citation](components/citation.md) components.
 
 {% hint style="info" %}
-**Do not edit `citations.yaml`!** This is the output of the cite process, and will get overwritten each time it is run. If you need to manually input or correct things, see below.
+Do not edit `citations.yaml`! It will get overwritten each time the cite process runs. If you need to manually input or correct things, see below.
 {% endhint %}
+
+<details>
+
+<summary>The cite process in detail...</summary>
+
+1. Each source/metasource file gets processed by the appropriate "cite plugin" based on filename prefix.
+2. In metasource files, each list entry gets expanded into a list of regular sources. Any fields you put in the original entry get copied to each source in the expanded list.
+3. In source files, each list entry stays as-is.
+4. Additional metadata is attached to each source, like which input source or metasource file it originated from and which cite plugin it ran with.
+5. A master list of regular sources is compiled, with duplicates merged together by `id`.
+6. Manubot generates full citation details for each source that has an `id`.
+7. Any field originally on each source is preserved.
+
+</details>
 
 ## Examples
 
@@ -60,7 +71,7 @@ See examples below for filenames and behaviors of each cite plugin.
 
 ### Rich details
 
-Optionally, you can manually pass extra "rich" details that Manubot can't determine that the template can display nicely.
+Optionally, you can manually pass extra "rich" details that the template can display nicely. Manubot can't automatically determine these for you.
 
 {% code title="/_data/sources.yaml" %}
 ```yaml
@@ -87,11 +98,11 @@ Optionally, you can manually pass extra "rich" details that Manubot can't determ
 | Parameter     | Description                                                                                                                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`        | <p>The type of the source. Determines the icon to show.<br><br>See <code>/_data/types.yaml</code> for what types are built-in or to add your own.</p> |
-| `description` | Brief description of the source. Supports Markdown.                                                                                                   |
+| `description` | Brief description of the source. Accepts Markdown.                                                                                                    |
 | `image`       | URL to a striking image for the source. Highly recommended. Displays as a thumbnail next to the citation details.                                     |
-| `buttons`     | List of [buttons](../components/button.md) to show underneath the citation details.                                                                   |
-| `tags`        | List of [tags](../components/tags.md) to show underneath the citation details.                                                                        |
-| `repo`        | GitHub repository to automatically fetch additional [tags](../components/tags.md) from.                                                               |
+| `buttons`     | List of [buttons](components/button.md) to show underneath the citation details.                                                                      |
+| `tags`        | List of [tags](components/tags.md) to show underneath the citation details.                                                                           |
+| `repo`        | GitHub repository to automatically fetch additional [tags](components/tags.md) from.                                                                  |
 
 {% hint style="info" %}
 Always provide a good thumbnail for your publications. Use a figure from the source, or if there are none, a journal logo or issue cover. [Here are some best practices for making a good thumbnail image](https://github.com/manubot/catalog#thumbnail-guidelines).
@@ -103,7 +114,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 
 {% code title="/_data/sources.yaml" %}
 ```yaml
-# override specific citation detail
+# manually correct specific citation detail
 - id: pmc:PMC5640425
   publisher: Cold Spring Harbor
 
@@ -122,13 +133,13 @@ All fields you attach to a source (or metasource, see below) get passed through 
 ```
 {% endcode %}
 
-|                            |                                                                                                                                                                                |
-| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `title` / `authors` / etc. | Regular/basic citation information normally returned from Manubot and displayed by the [citation](../components/citation.md) component. Date should be in `YYYY-MM-DD` format. |
+|                                                     |                                                                                                                                                                     |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `title` / `authors` / `publisher` / `date` / `link` | Basic citation information normally returned from Manubot and displayed by the [citation](components/citation.md) component. Date should be in `YYYY-MM-DD` format. |
 
-If you don't provide an `id`, Manubot has nothing to cite and so doesn't run. You'd only want to do this if manually providing all the citation details manually. This defeats the main benefit of the template, but sometimes necessary.
+If you don't provide an `id`, Manubot has nothing to cite and so doesn't run. You'd only want to do this if manually providing all the citation details manually. This defeats the main benefit of the template, but is sometimes necessary.
 
-You can also attach any arbitrary field and it will be passed through. The template won't explicitly use it, but you can use it filter citations with the [list](../components/list.md) component.
+You can also attach arbitrary fields. The template won't explicitly use them, but you could use them to filter citations with the [list](components/list.md) component.
 
 ### ORCID
 
@@ -143,19 +154,43 @@ You can also attach any arbitrary field and it will be passed through. The templ
 ```
 {% endcode %}
 
+Each ORCID gets expanded into a full list of regular sources with `id`s. Any fields you put in the original entry get copied to each source in the expanded list. This applies to the other types of metasources below as well.
 
+Because the cite process merges duplicate sources by `id`, you can also use the [manual override method](citations.md#manual-override) above to manually correct sources returned from metasources. Example:
+
+{% code title="/_data/sources.yaml" %}
+```yaml
+# some paper returned by an ORCID with a wrong title
+- id: doi:123/456
+  title: Correct Title
+```
+{% endcode %}
 
 ### PubMed
 
+Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubMed](https://pubmed.ncbi.nlm.nih.gov/) for terms. This is a brittle way to select an author's papers, very vulnerable to false positives. ORCID is recommended.
 
+{% code title="/_data/pubmed.yaml" %}
+```yaml
+- term: "Greene, C[Author] NOT Greene CE[Author]"
+  some-field: 123
+```
+{% endcode %}
 
 ### Google Scholar
 
-Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/).
+Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if running the [cite process on GitHub](../getting-started/edit-your-site.md#citations), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/edit-your-site.md#citations-1), put a variable of the same name in a `.env` file.
+
+{% code title="/_data/google-scholar.yaml" %}
+```yaml
+- gsid: ETJoidYAAAAJ
+  some-field: 123
+```
+{% endcode %}
 
 ## Periodic updates
 
-Metasources like ORCID update over time as you publish new works. As such, the template comes with a GitHub Actions scheduled/cron workflow that re-runs the cite process periodically. This will get the latest sources associated with your metasources, generate citations as normal, and open a pull request to let you review the changes before publishing them.
+Metasources like ORCID update over time as you publish new sources. As such, the template comes with a GitHub Actions scheduled/cron workflow that re-runs the cite process periodically. This will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
 
 ## Cache
 

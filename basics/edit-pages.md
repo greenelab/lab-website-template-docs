@@ -10,7 +10,7 @@ The pages and sub-pages on your site [come from the folder and file structure of
 
 Examples:
 
-|          | URL you want             | Folders and files to create |
+| Type     | URL you want             | Folders and files to create |
 | -------- | ------------------------ | --------------------------- |
 | Homepage | `yoursite.com/`          | `index.md`                  |
 | Page     | `yoursite.com/awards`    | `/awards/index.md`          |
@@ -47,8 +47,6 @@ redirect_from:
 
 Page content.
 ```
-
-#### Parameters
 
 | Parameter                     | Description                                                                                                                                                       | Default                                                 |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |

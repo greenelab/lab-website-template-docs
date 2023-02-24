@@ -2,10 +2,18 @@
 
 The template is extendable with regular web-based plugins and libraries. If you find a library that is based on HTML/CSS/JS, you can probably use it in the template.
 
-* Twitter timeline
-* JavaScript calendar library
-* JavaScript image carousel library
+Here are some things you may be interested to embed:
+
+* [Twitter timeline](https://publish.twitter.com)
 * [GitHub stats cards](https://github.com/anuraghazra/github-readme-stats)
+* [Event calendar](https://fullcalendar.io/)
+* [Image carousel](https://glidejs.com/)
+
+HTML can be pasted directly into the Markdown of your page wherever you want it. CSS files can be either linked to in `/_includes/styles.html` or directly saved in `/_styles`. JS files can be either linked to in `/_includes/scripts.html` or directly saved in `/_scripts`.
+
+{% hint style="info" %}
+You can also try the quick and convenient [media embeds provided by the pre-installed Jekyll Spaceship plugin](math-diagrams-media-etc..md) for things like Youtube, Vimeo, Spotify, and more.
+{% endhint %}
 
 ## Comments section
 

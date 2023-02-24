@@ -8,13 +8,13 @@ If there already exists a Jekyll plugin to achieve a feature (properly and relia
 
 These plugins are so useful that we've chosen to bundle them in the template by default. Some of the features in the template rely on these plugins, and these docs assumed they are installed.
 
-| Plugin                                                                           | Description                                                                                                                                                      |
-| -------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [jekyll-spaceship](https://github.com/jeffreytse/jekyll-spaceship)               | A Jekyll "Swiss Army Knife". Provides support for table, mathjax, plantuml, mermaid, emoji, video, audio, youtube, vimeo, dailymotion, soundcloud, spotify, etc. |
-| [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)                       | Generates a sitemap file and puts it in your website (hidden) for search engines to see.                                                                         |
-| [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)           | Allows you to add a `redirect_from` field to a page's front matter. When a user visits one of the URLs listed, they'll be redirected to the page instead.        |
-| [jekyll-feed](https://github.com/jekyll/jekyll-feed)                             | Generates an RSS-like feed of your blog posts and puts it in your website (hidden) for RSS tools to see.                                                         |
-| [jekyll-last-modified-at](https://github.com/gjtorikian/jekyll-last-modified-at) | Allows you to access the last time a file on your site was changed.                                                                                              |
+| Plugin                                                                           | Description                                                                                                                                                                                  |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [jekyll-spaceship](https://github.com/jeffreytse/jekyll-spaceship)               | A Jekyll "Swiss Army Knife". Provides support for table, mathjax, plantuml, mermaid, emoji, video, audio, youtube, vimeo, dailymotion, soundcloud, spotify, etc. See its docs for more info. |
+| [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)                       | Generates a sitemap file and puts it in your website (hidden) for search engines to see.                                                                                                     |
+| [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)           | Allows you to add a `redirect_from` field to a page's front matter. When a user visits one of the URLs listed, they'll be redirected to the page instead.                                    |
+| [jekyll-feed](https://github.com/jekyll/jekyll-feed)                             | Generates an RSS-like feed of your blog posts and puts it in your website (hidden) for RSS tools to see.                                                                                     |
+| [jekyll-last-modified-at](https://github.com/gjtorikian/jekyll-last-modified-at) | Allows you to access the last time a file on your site was changed.                                                                                                                          |
 
 Usage of each of these plugins is either passive, or documented on another page where appropriate.
 

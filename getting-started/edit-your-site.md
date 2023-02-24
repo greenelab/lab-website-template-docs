@@ -22,7 +22,7 @@ In pull requests, the template will build a live preview of the changes you are 
 
 ### Citations
 
-For your convenience, the template tells GitHub to run the [cite process](edit-your-site.md#citations) and commit the result whenever you push to `main` or make a pull request.
+For your convenience, the template tells GitHub to run the [cite process](../basics/citations.md) and commit the result whenever you push to `main` or make a pull request.
 
 If you're doing a pull request from a fork, make sure "[Allow edits from maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)" is checked in your pull request so the cite process has permission to commit its results.
 

@@ -15,5 +15,5 @@ Typically you'd use this with the [list](list.md) component, which would automat
 
 | Parameter      | Description                                                                                                                         |
 | -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `lookup`       | Lookup post details from `posts` by filename.                                                                                       |
+| `lookup`       | Lookup post details from `posts` by filename, without the `YYYY-MM-DD-` date prefix or `.md` extension.                             |
 | `title` / etc. | The same parameters outlined in [blog posts](../blog-posts.md). Retrieved from lookup, or passed automatically from list component. |

@@ -47,8 +47,9 @@
 
 * [Update your template](advanced/update-your-template.md)
 * [Embeds](advanced/embeds.md)
-* [Math, diagrams, media, etc.](advanced/math-diagrams-media-etc..md)
+* [Math, diagrams, videos, etc.](advanced/math-diagrams-videos-etc..md)
 * [Data and collections](advanced/data-and-collections.md)
 * [Analytics](advanced/analytics.md)
 * [Jekyll plugins](advanced/jekyll-plugins.md)
 * [Background knowledge](advanced/background-knowledge.md)
+* [Custom components](advanced/custom-components.md)

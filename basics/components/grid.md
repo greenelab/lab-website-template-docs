@@ -4,7 +4,7 @@ description: A grid of items
 
 # Grid
 
-A list of items to arrange in a grid. Useful for image galleries.
+A list of items to arrange in a grid. Wraps on smaller screen sizes. Compared to the [cols](cols.md) component, use this when you have 3 or more individual items that are roughly the same proportions, for example for image galleries.
 
 ```
 {% raw %}
@@ -24,7 +24,7 @@ A list of items to arrange in a grid. Useful for image galleries.
 %}
 ```
 
-| Parameter | Description                                                                                 | Default         |
-| --------- | ------------------------------------------------------------------------------------------- | --------------- |
-| `content` | Separate items to arrange in a grid. Any arbitrary content using Liquid's capture function. |                 |
-| `style`   | Visual style of the grid. Set to `square` to force the items to have a 1:1 aspect ratio.    | Items auto-size |
+| Parameter | Description                                                                                        | Default         |
+| --------- | -------------------------------------------------------------------------------------------------- | --------------- |
+| `content` | Separate items to arrange in a grid. Can be any arbitrary content using Liquid's capture function. |                 |
+| `style`   | Visual style of the grid. Set to `square` to force the items to have a 1:1 aspect ratio.           | Items auto-size |

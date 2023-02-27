@@ -1,6 +1,6 @@
-# Math, diagrams, media, etc.
+# Math, diagrams, videos, etc.
 
-The template comes pre-installed with a versatile Jekyll plugin called [Jekyll Spaceship](https://github.com/jeffreytse/jekyll-spaceship).
+The template comes pre-installed with a versatile Jekyll plugin called Jekyll Spaceship.
 
 {% embed url="https://github.com/jeffreytse/jekyll-spaceship" %}
 
@@ -21,4 +21,4 @@ The plugin has many useful features beyond the standard capabilities of Markdown
   * SoundCloud
 * GitHub-flavored emoji, e.g. `:+1` -> :thumbsup:
 
-See Jekyll Spaceship's documentation for examples of how to easily write the above in your Markdown.
+See [Jekyll Spaceship's documentation](https://github.com/jeffreytse/jekyll-spaceship) for examples of how to easily do all of this right in your Markdown.

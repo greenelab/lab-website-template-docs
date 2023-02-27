@@ -16,6 +16,6 @@ Typically you'd use this with the [list](list.md) component, which would automat
 
 | Parameter     | Description                                                                                                                             |
 | ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `lookup`      | Lookup member details from `members` by filename.                                                                                       |
+| `lookup`      | Lookup member details from `members` by filename, without the `.md` extension.                                                          |
 | `style`       | Visual style of the portrait. Set to `small` to make it a bit smaller, or set to `tiny` to make it very small and horizontal layout.    |
 | `name` / etc. | The same parameters outlined in [team members](../team-members.md). Retrieved from lookup, or passed automatically from list component. |

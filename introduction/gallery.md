@@ -4,7 +4,7 @@ description: Check out what other folks are building with the template!
 
 # Gallery
 
-[👁️ Live version of the template itself](https://greenelab.github.io/lab-website-template/)
+[👁️ Live version of the template](https://greenelab.github.io/lab-website-template/)
 
 [⭐ Submit your LWT-based website to be shown off here!](https://github.com/greenelab/lab-website-template/issues/97)
 

@@ -1,20 +1,19 @@
----
-description: A set of components and behaviors to search a page
----
-
 # Search
 
-The template can dynamically hide/filter [certain components](https://github.com/greenelab/lab-website-template/blob/main/js/search.js) on the page based on a search query. A search can happen in a few different ways:
+The template can dynamically (when a visitor comes to your site) filter items on a page based on a search.
 
-| Method               | Description                                                                                                                                                        |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Search box component | Putting a search box component on a page with `{% include search-box.html %}` lets visitors type in their own searches.                                            |
-| Tags component       | Clicking on a tag in the [tags](tags.md) component automatically searches a page for items that contain that tag.                                                  |
-| Permalink            | Appending `?search=some search` to a page URL automatically runs a search on that page. See [team member aliases](../team-members.md) for a good use case of this. |
+## How can a search happen?
 
-To show info about what items are being filtered, e.g. _Showing 12 of 60_, you can put a search info component on a page with `{% include search-info.html %}` (only visible if something is being searched).
+* A visitor types in a search box component (see below).
+* A visitor clicks on a link with e.g. `?search=some search` in the URL, like a [tag](tags.md) or a [team member page research link](../team-members.md) (see `aliases`).
 
-## Search syntax
+## What items are filtered?
+
+By default, the only items on the page that are filtered the [card](card.md), [citation](../citations.md), and [post excerpt](post-excerpt.md) components.
+
+You could customize this in `/_scripts/search.js` to filter any kind of item that is selectable with a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Selectors), for example `p` for paragraph elements.
+
+## How are items filtered?
 
 You can search for terms, phrases, and tags:
 
@@ -22,3 +21,26 @@ You can search for terms, phrases, and tags:
 
 Items that contain **all of the terms**, **at least one of the phrases**, and **at least one of the tags** will be considered a match. Search words will be highlighted in the results (if they're longer than 2 characters). Matching is case insensitive.
 
+In addition to the visible text content of the item, tooltip and other content are also searched (via the `data-tooltip` and `data-search` attributes).
+
+## Relevant components
+
+You can put a search box component on the page to let visitors type in their own search:
+
+```liquid
+{% raw %}
+{% include search-box.html %}
+{% endraw %}
+```
+
+This also updates the URL so they can conveniently link to that page with that search.
+
+To show info about what items are being filtered, e.g. _Showing 12 of 60_, you can put a search info component on a page:
+
+```liquid
+{% raw %}
+{% include search-info.html %}
+{% endraw %}
+```
+
+Only visible if something is being searched.

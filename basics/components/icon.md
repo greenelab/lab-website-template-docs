@@ -11,6 +11,6 @@ description: Font Awesome or custom SVG icon
 %}
 ```
 
-| Parameter | Description                                                                                                                            |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `icon`    | Full class name of [Font Awesome free icon](https://fontawesome.com/search?o=r\&m=free), or name of a custom icon SVG in `/_includes`. |
+| Parameter | Description                                                                                                                                                                          |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `icon`    | Full class name of [Font Awesome free icon](https://fontawesome.com/search?o=r\&m=free), e.g. `fa-brands fa-github`, or name of a custom icon SVG in `/_includes`, e.g. `orcid.svg`. |

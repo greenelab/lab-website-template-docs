@@ -1,8 +1,8 @@
 # Citations
 
-Arguably the most important feature of this template is its ability to automatically generate citations from simple identifiers, making it easy to cite and maintain large lists of publications.
+Arguably the most important feature of this template is its ability to automatically generate citations from simple identifiers. This makes it easy to cite and maintain large lists of publications.
 
-The template is able to do this thanks to [**Manubot**](https://github.com/manubot/manubot#cite)**,** a suite of tools that (among many other things) lets you automatically generate a citation with full details from just a short identifier, like `doi`, `url`, `isbn`, `pmc`, `pmcid`, `pubmed`, `arxiv`, and [many many more](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155).
+The template is able to do this thanks to [Manubot](https://github.com/manubot/manubot#cite)**,** a suite of tools that (among many other things) lets you automatically generate a citation with full details from just a short identifier, like `doi`, `url`, `isbn`, `pmc`, `pmcid`, `pubmed`, `arxiv`, and [many many more](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155).
 
 {% embed url="https://manubot.org/" %}
 
@@ -12,21 +12,68 @@ First let's define some consistent terminology to make things easier to explain:
 
 * **source** - A paper, book, article, web page, film, or any other published item you want to cite.
 * **metasource** - A single item that lists multiple sources, like how an author's [ORCID number](https://orcid.org/) can be used to get a list of their published works.
-* **citation** - Detailed information about a source, like author(s), publisher, publish date, url, issue number, journal, etc.
+* **citation** - Detailed information about a source, like title, author(s), publisher, publish date, URL,  etc.
 
 You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like!
 
-For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few curated papers by various members in your lab that you want to highlight.
-
-Or, you may want to forgo any kind of metasource and just have a small handful of manually selected sources to display on your homepage.
+For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few special papers by various members in your lab that you want to highlight.
 
 ## How it works
 
-{% hint style="info" %}
-Diagram coming soon
-{% endhint %}
-
 At a high level, here's how automatic citations work:
+
+```mermaid
+%%{
+  init: {
+    "fontFamily": "Arial",
+    "stroke": "none",
+    "flowchart": {
+      "curve": "monotoneX"
+    }
+  }
+}%%
+
+graph LR
+  subgraph input
+    sources([sources*.yaml])
+
+    subgraph metasources
+      orcid([orcid*.yaml])
+      etc([etc...])
+    end
+  end
+
+  subgraph cite ["cite process"]
+    expand([expand to sources])
+    merge([merge sources])
+    manubot([Manubot])
+    preserve([preserve input fields])
+  end
+
+  subgraph output
+    citations([citations.yaml])
+    title[titles\nauthors\npublishers\netc...\ninput fields]
+  end
+
+  sources --> merge
+  orcid --> expand
+  etc --> expand
+  expand --> merge
+  merge --> manubot
+  manubot --> preserve
+  preserve --> citations
+
+  classDef node fill:#38bdf8,stroke:none,color:white
+  classDef cluster fill:#e0f2fe,stroke:white,stroke-width:3px
+  classDef input fill:#e0f2fe
+  classDef cite fill:#ffedd5
+  classDef output fill:#dcfce7
+  classDef title fill:none,color:black
+  class input, input
+  class cite, cite
+  class output, output
+  class title, title
+```
 
 1. Input your sources and metasources in `/_data` files, e.g. `sources-2020.yaml`, `orcid-students.yaml`, etc.
 2. Run the **cite process** – either [automatically (on GitHub)](../getting-started/edit-your-site.md#citations) or [manually (locally)](../getting-started/edit-your-site.md#citations-1) – to convert your sources and metasources to full citations.
@@ -41,11 +88,11 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 
 <summary>The cite process in detail...</summary>
 
-1. Each source/metasource file gets processed by the appropriate "cite plugin" based on filename prefix.
+1. Each source/metasource file gets processed by the appropriate cite plugin based on filename prefix.
 2. In metasource files, each list entry gets expanded into a list of regular sources. Any fields you put in the original entry get copied to each source in the expanded list.
 3. In source files, each list entry stays as-is.
-4. Additional metadata is attached to each source, like which input source or metasource file it originated from and which cite plugin it ran with.
-5. A master list of regular sources is compiled, with duplicates merged together by `id`.
+4. Metadata about the cite process is attached to each source, like which input source or metasource file it originated from and which cite plugin it ran with.
+5. A full list of regular sources is compiled, with duplicates merged together by `id`.
 6. Manubot generates full citation details for each source that has an `id`.
 7. Any field originally on each source is preserved.
 
@@ -69,9 +116,11 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`      | Identifier for the source that [Manubot can understand and cite](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155). If Manubot is unable to generate a citation for this ID, the template will log an error message and exit with an error code. |
 
+**Filename must start with `sources`.**
+
 ### Rich details
 
-Optionally, you can manually pass extra "rich" details that the template can display nicely. Manubot can't automatically determine these for you.
+Optionally, you can manually pass extra "rich" details that the template can display nicely. Manubot can't automatically determine these.
 
 {% code title="/_data/sources.yaml" %}
 ```yaml
@@ -154,6 +203,8 @@ You can also attach arbitrary fields. The template won't explicitly use them, bu
 ```
 {% endcode %}
 
+**Filename must start with `orcid`.**
+
 Each ORCID gets expanded into a full list of regular sources with `id`s. Any fields you put in the original entry get copied to each source in the expanded list. This applies to the other types of metasources below as well.
 
 Because the cite process merges duplicate sources by `id`, you can also use the [manual override method](citations.md#manual-override) above to manually correct sources returned from metasources. Example:
@@ -177,9 +228,11 @@ Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubM
 ```
 {% endcode %}
 
+**Filename must start with `pubmed`.**
+
 ### Google Scholar
 
-Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if running the [cite process on GitHub](../getting-started/edit-your-site.md#citations), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/edit-your-site.md#citations-1), put a variable of the same name in a `.env` file.
+Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if running the [cite process on GitHub](../getting-started/edit-your-site.md#citations), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/edit-your-site.md#citations-1), put the same name/value in a `.env` file.
 
 {% code title="/_data/google-scholar.yaml" %}
 ```yaml
@@ -188,9 +241,11 @@ Unfortunately, Google does not provide APIs for many of its services, and that i
 ```
 {% endcode %}
 
+**Filename must start with `google-scholar`.**
+
 ## Periodic updates
 
-Metasources like ORCID update over time as you publish new sources. As such, the template comes with a GitHub Actions scheduled/cron workflow that re-runs the cite process periodically. This will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
+Metasources like ORCID update over time as you publish new sources. As such, the template periodically re-runs the cite process without provocation. This will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
 
 ## Cache
 

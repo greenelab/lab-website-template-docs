@@ -10,7 +10,7 @@ Not every tool is right for every person or team. This template is built on the 
 
 If you're not comfortable with or at least familiar with the above, this template may not be right for you. If you want to learn more, see this [crash course on the tech used in this template](../advanced/background-knowledge.md).
 
-{% hint style="warning" %}
+{% hint style="info" %}
 The GitHub Pages hosting service is free, but _only for public repos_. If you want the source code of your website to be private, [you'll have to pay for it](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site).
 {% endhint %}
 

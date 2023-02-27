@@ -6,7 +6,7 @@ description: >-
 
 # Citation
 
-Typically you'd use this with the [list](list.md) component, which would automatically read from `citations.yaml` and pass this component the parameters. But you can also use it stand-alone to manually display individual citations:
+Typically you'd use this with the [list](list.md) component, which would automatically read from `citations.yaml` and pass this component the appropriate parameters. But you can also use it stand-alone to manually display individual citations:
 
 ```liquid
 {%

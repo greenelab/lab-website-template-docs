@@ -48,16 +48,20 @@ redirect_from:
 Page content.
 ```
 
-| Parameter                     | Description                                                                                                                                                       | Default                                                 |
-| ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| `title`                       | Title of the page. Shown in the tab name along with your [site title](configure-your-site.md), e.g. "Awards \| Your Lab Website"                                  |                                                         |
-| `description`                 | Description of the page that will show under search engine results.                                                                                               | [Site-wide description](configure-your-site.md)         |
-| `nav`                         | If this field is present, the page will appear in the header navigation bar, with the same name as the page's title.                                              |                                                         |
-| `nav` -> `order`              | How the page should be ordered in the nav bar. Number value, lowest to highest -> left to right.                                                                  |                                                         |
-| `nav` -> `tooltip`            | Text to show when hovering over the page's nav bar link.                                                                                                          |                                                         |
-| `header`/`footer`             | Background image for the header/footer of the page.                                                                                                               | [Site-wide header/footer image](configure-your-site.md) |
-| `header-dark` / `footer-dark` | Header/footer dark/light mode of the page. Headers/footers/sections have a solid color that overlays any background image to always maintain readability of text. | [Site-wide header/footer mode](configure-your-site.md)  |
-| `redirect_from`               | When a user visits one of the URLs listed, they'll be redirected to this page instead.                                                                            |                                                         |
+| Parameter                     | Description                                                                                                                      | Default                                                 |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
+| `title`                       | Title of the page. Shown in the tab name along with your [site title](configure-your-site.md), e.g. "Awards \| Your Lab Website" |                                                         |
+| `description`                 | Description of the page that will show under search engine results.                                                              | [Site-wide description](configure-your-site.md)         |
+| `nav`                         | If this field is present, the page will appear in the header navigation bar, with the same name as the page's title.             |                                                         |
+| `nav` -> `order`              | How the page should be ordered in the nav bar. Number value, lowest to highest -> left to right.                                 |                                                         |
+| `nav` -> `tooltip`            | Text to show when hovering over the page's nav bar link.                                                                         |                                                         |
+| `header`/`footer`             | Background image for the header/footer of the page.                                                                              | [Site-wide header/footer image](configure-your-site.md) |
+| `header-dark` / `footer-dark` | Header/footer dark/light mode of the page.                                                                                       | [Site-wide header/footer mode](configure-your-site.md)  |
+| `redirect_from`               | When a user visits one of the URLs listed, they'll be redirected to this page instead.                                           |                                                         |
+
+{% hint style="info" %}
+Headers/footers/sections have a solid color that overlays any background image to always maintain readability of text.
+{% endhint %}
 
 {% hint style="info" %}
 If you have a `.md` file without a front matter, Jekyll will ignore it and not convert it to an `.html` file, and thus it won't end up in your site. If you don't need any page details, just leave the two lines of `---` with nothing in between.

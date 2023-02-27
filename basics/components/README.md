@@ -8,8 +8,6 @@ Markdown is meant for [basic content](../write-basic-content.md), but sometimes 
 
 The template comes with many pre-made components so you can assemble your website however you want with ease.
 
-## Example
-
 Simply place the code for a component in one of your markdown files, and it will appear in your site. The basic syntax for including a component is:
 
 ```liquid

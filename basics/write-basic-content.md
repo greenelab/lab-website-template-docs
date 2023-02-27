@@ -14,7 +14,7 @@ To an external site:
 
 To a page within your site:
 
-```
+```markdown
 [Meet our team!](team)
 ```
 
@@ -57,9 +57,7 @@ Jekyll automatically prepends the right baseurl
 
 </details>
 
-<details>
-
-<summary>Data, front-matter, components</summary>
+### Data, front-matter, components
 
 Specifying URLs in `/_data` files, front matters, [component](components/) parameters, etc. works differently than it does in Markdown content. The link to the page/image/etc. **must be relative to the root of your repo**. You cannot refer to files relative to the current file, or use the `..` to move up folders.
 
@@ -67,13 +65,11 @@ Specifying URLs in `/_data` files, front matters, [component](components/) param
 - image: images/photo.jpg
 ```
 
-```
+```liquid
 {% raw %}
 {% include some-component.html image="images/photo.jpg" %}
 {% endraw %}
 ```
-
-</details>
 
 ## **Basic text styles**
 
@@ -183,7 +179,7 @@ This sentence has `inline code`, useful for making references to variables, pack
 
 In Markdown, you can attach an arbitrary CSS class to an element with the syntax `{:.class}`. Depending on the type of element, this code may have to go on the same line or on the next line.
 
-The template has a few utility classes for basic things:
+The template has a few utility classes for basic things.
 
 ```markdown
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

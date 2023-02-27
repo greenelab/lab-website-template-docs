@@ -1,6 +1,6 @@
 # Edit your site
 
-There are two main ways you can make changes to your site, each with benefits and limitations: on GitHub and on your computer. Choose which one best suits you, or you can mix and match as appropriate.
+There are two main ways you can make changes to your site, each with benefits and limitations: **on GitHub** and **on your computer**. Choose which one best suits you, or you can mix and match as appropriate.
 
 {% hint style="info" %}
 For most content on your site, you just need change the contents of the appropriate file.
@@ -20,11 +20,15 @@ There is a [basic interface](https://docs.github.com/en/repositories/working-wit
 
 In pull requests, the template will build a live preview of the changes you are making to your site. A public link to the preview will be in a comment on the pull request. This way, reviewers and editors can see the tangible result of the changes conveniently.
 
+{% hint style="info" %}
+Note: The comment on the PR will appear a little bit before (\~30 seconds) the the preview is actually finished deploying. Keep that in mind if you click on the link and see a 404 error or non-updated website.
+{% endhint %}
+
 ### Citations
 
 For your convenience, the template tells GitHub to run the [cite process](../basics/citations.md) and commit the result whenever you push to `main` or make a pull request.
 
-If you're doing a pull request from a fork, make sure "[Allow edits from maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)" is checked in your pull request so the cite process has permission to commit its results.
+If you're doing a pull request from a fork, make sure "[Allow edits from maintainers](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/allowing-changes-to-a-pull-request-branch-created-from-a-fork)" is checked in your pull request _before you open it_ so the cite process has permission to commit its results.
 
 {% hint style="warning" %}
 Due to an [unfortunate GitHub limitation](https://github.com/orgs/community/discussions/5634), if you're making changes from a fork under an _organization_, you wont see the "allow edits" option and the cite process wont work. You'll have to make changes from a branch instead, or run the cite process locally.
@@ -33,6 +37,12 @@ Due to an [unfortunate GitHub limitation](https://github.com/orgs/community/disc
 ## On your computer (locally)
 
 This approach requires experience with Git, but is better for when you're doing larger edits, when you want to work on your changes privately before pushing them, and when you want to iterate rapidly and not wait for pull request previews to update.
+
+{% hint style="warning" %}
+We are working on a Docker container that will simplify local previewing and citation-building into a single install and command, and hopefully work more consistently across platforms.
+
+In the meantime, if you are having trouble getting previewing to work on Windows, [see this thread](https://github.com/oneclick/rubyinstaller2/issues/96).
+{% endhint %}
 
 ### Editing
 
@@ -53,16 +63,11 @@ To build a preview of your site locally:
 
 1. [Install Ruby](https://www.ruby-lang.org/en/documentation/installation/) v3+ (on Windows, use the [installer](https://rubyinstaller.org/downloads/) and the recommended version with the Devkit).
 2. [Install Bundler](https://bundler.io/) by running `gem install bundler`.
-3. [Install Jekyll](https://jekyllrb.com/) by running `gem install jekyll`.
-4. Go to the folder where you cloned your site, e.g. `cd your-lab-website`.
-5. Bundle the site by running `bundle`.
-6. Start the site by running `bundle exec jekyll serve --open-url --livereload --trace`
+3. Go to the folder where you cloned your site, e.g. `cd your-lab-website`.
+4. Bundle the site by running `bundle`.
+5. Start the site by running `bundle exec jekyll serve --open-url --livereload --trace`
 
 Your site should automatically open in a browser, and any changes you make should automatically rebuild the site and refresh the page, except for changes to `_config.yaml` which require re-running the start command.
-
-{% hint style="warning" %}
-Unfortunately, the `livereload` feature is difficult to get working on Windows. You can either remove the flag from the start command, or [see this thread](https://github.com/oneclick/rubyinstaller2/issues/96) to find solutions.
-{% endhint %}
 
 {% hint style="info" %}
 Building your site is (surprisingly) not deterministic, because some of the pre-installed [Jekyll plugins](../advanced/jekyll-plugins.md) always add the date-time when the site was built, regardless of whether any content changed. Be aware of this when building locally, or if tampering with the built-in GitHub Actions workflows.

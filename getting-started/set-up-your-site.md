@@ -33,9 +33,9 @@ Once you decide which approach to take, follow the appropriate setup steps below
 {% endtabs %}
 
 {% hint style="info" %}
-GitHub frequently changes and rearranges its web interface, so you may notice slight discrepancies in the instructions above. We've tried to write the instructions more abstractly, linking to GitHub's official documentation for more details.
+A lot of the automation in this template relies on GitHub Actions, which sometimes (very rarely) [goes down](https://www.githubstatus.com/). Be aware of this in case a process in the template ever fails.
 {% endhint %}
 
 {% hint style="info" %}
-A lot of the automation in this template relies on GitHub Actions, which sometimes (very rarely) [goes down](https://www.githubstatus.com/).
+GitHub frequently changes and rearranges its web interface, so you may notice slight discrepancies in the instructions above. We've tried to write the instructions more abstractly, linking to GitHub's official documentation for more details.
 {% endhint %}

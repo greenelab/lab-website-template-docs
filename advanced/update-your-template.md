@@ -49,7 +49,7 @@ We'll assume you already know how to [perform a merge conflict resolution in you
 
 The hard part is carefully picking out which changes to accept. This essentially boils down to distinguishing between [template content and user content](../basics/repo-structure.md). For template content, you want to "accept incoming changes" (pull in updates from the template). For user content, you want to "accept current changes" (keep the current content in your repo).
 
-Sometimes updates to the template affect your user content though, like a component parameter or `_data` field being renamed. You may have also made modifications to template code (e.g. tweaking the appearance of a component). In these cases, you'll have to judiciously decide how or if to merge in the updates.
+Sometimes updates to the template will be "breaking changes" and will affect your user content, like a component parameter being renamed. You may have also made modifications to template code, like tweaking the appearance of a component. In these cases, you'll have to judiciously decide how or if to merge in the updates.
 
 {% hint style="warning" %}
 This process is very tricky, even for the maintainers of this template. When doing this, carefully check every page and section on your site before publishing the changes.

@@ -1,3 +1,7 @@
+---
+description: How to add, remove, and edit team members
+---
+
 # Team members
 
 ## Add/remove members
@@ -35,12 +39,16 @@ One or two paragraphs is probably best.
 ```
 {% endcode %}
 
-| Parameter     | Description                                                                                                                                                                                                                     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `name`        | Display name of team member.                                                                                                                                                                                                    |
-| `image`       | URL to portrait photo of team member.                                                                                                                                                                                           |
-| `role`        | <p>Team member's role in your organization. Determines the icon and default text to show.<br><br>See <code>/_data/types.yaml</code> for what types of roles are built-in or to add your own.</p>                                |
-| `description` | Description of team member's role in your organization. Overrides any default text set because of  `role`.                                                                                                                      |
-| `aliases`     | By default, team member pages have a link at the bottom that goes to the "Research" page and searches for any papers by them. This field is a list of aliases/variations/abbreviations of the team member's name to search for. |
-| `links`       | <p>Social media links for the team member, without any prefixes like <code>@</code>, <code>www.</code>, etc.<br><br>See <code>/_data/types.yaml</code> for what types of links are built-in or to add your own.</p>             |
+| Parameter     | Description                                                                                                                                                                                                                                   |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `name`        | Display name of team member.                                                                                                                                                                                                                  |
+| `image`       | URL to portrait photo of team member.                                                                                                                                                                                                         |
+| `role`        | <p>Team member's role in your organization. Determines the <a href="components/icon.md">icon</a> and default description text to show.<br><br>See <code>/_data/types.yaml</code> for what types of roles are built-in or to add your own.</p> |
+| `description` | Description of team member's role in your organization. Overrides any default text set from of  `role`.                                                                                                                                       |
+| `aliases`     | By default, team member pages have a link at the bottom that goes to the "Research" page and searches for any papers by them. This field is a list of aliases/variations/abbreviations of the team member's name to search for.               |
+| `links`       | <p>Social media links for the team member, without any prefixes like <code>@</code>, <code>www.</code>, etc.<br><br>See <code>/_data/types.yaml</code> for what types of links are built-in or to add your own.</p>                           |
+
+## Customize member page
+
+The skeleton arrangement and style of team member pages are based on the `/_layouts/member.html` template, which you can freely edit to your liking.
 

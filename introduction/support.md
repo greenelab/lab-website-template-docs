@@ -14,7 +14,7 @@ The template is regularly tested on the following:
 * Windows, MacOS, iOS, Android
 * Desktop, tablet, phone/mobile
 
-The template makes sure to only use standardized and widely-supported HTML, CSS, and JavaScript features, so any other modern, standard-compliant browser such as Opera or Microsoft Edge should also work, even if not explicitly tested.
+We only use standardized and widely-supported HTML, CSS, and JavaScript features, so any other modern, standard-compliant browser such as Opera or Microsoft Edge should also work, even if not explicitly tested.
 
 The following are **NOT** supported, and may result in unexpected look or behavior:
 

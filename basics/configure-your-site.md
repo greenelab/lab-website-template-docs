@@ -20,6 +20,7 @@ footer-dark: false
 # site social media and other links
 links:
   email: jane.smith@your-lab.com
+  orcid: 0000-0001-8713-9213
   google-scholar: ETJoidYAAAAJ
   github: your-lab
   twitter: YourLabHandle

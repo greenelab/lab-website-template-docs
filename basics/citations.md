@@ -102,6 +102,8 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 
 ### Basic id
 
+**Filename must start with `sources`.**
+
 {% code title="/_data/sources.yaml" %}
 ```yaml
 - id: doi:10.1098/rsif.2017.0387
@@ -115,8 +117,6 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 | Parameter | Description                                                                                                                                                                                                                                                                |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `id`      | Identifier for the source that [Manubot can understand and cite](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155). If Manubot is unable to generate a citation for this ID, the template will log an error message and exit with an error code. |
-
-**Filename must start with `sources`.**
 
 ### Rich details
 
@@ -182,7 +182,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 ```
 {% endcode %}
 
-|                                                     |                                                                                                                                                                     |
+| Parameter                                           | Description                                                                                                                                                         |
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `title` / `authors` / `publisher` / `date` / `link` | Basic citation information normally returned from Manubot and displayed by the [citation](components/citation.md) component. Date should be in `YYYY-MM-DD` format. |
 
@@ -194,6 +194,8 @@ You can also attach arbitrary fields. The template won't explicitly use them, bu
 
 [ORCID](https://orcid.org/) is the recommended way to retrieve a complete set of published works for an author.
 
+**Filename must start with `orcid`.**
+
 {% code title="/_data/orcid.yaml" %}
 ```yaml
 - orcid: 0000-0002-4655-3773
@@ -202,8 +204,6 @@ You can also attach arbitrary fields. The template won't explicitly use them, bu
 # ...another author
 ```
 {% endcode %}
-
-**Filename must start with `orcid`.**
 
 Each ORCID gets expanded into a full list of regular sources with `id`s. Any fields you put in the original entry get copied to each source in the expanded list. This applies to the other types of metasources below as well.
 
@@ -221,6 +221,8 @@ Because the cite process merges duplicate sources by `id`, you can also use the 
 
 Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubMed](https://pubmed.ncbi.nlm.nih.gov/) for terms. This is a brittle way to select an author's papers, very vulnerable to false positives. ORCID is recommended.
 
+**Filename must start with `pubmed`.**
+
 {% code title="/_data/pubmed.yaml" %}
 ```yaml
 - term: "Greene, C[Author] NOT Greene CE[Author]"
@@ -228,11 +230,11 @@ Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubM
 ```
 {% endcode %}
 
-**Filename must start with `pubmed`.**
-
 ### Google Scholar
 
 Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if running the [cite process on GitHub](../getting-started/edit-your-site.md#citations), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/edit-your-site.md#citations-1), put the same name/value in a `.env` file.
+
+**Filename must start with `google-scholar`.**
 
 {% code title="/_data/google-scholar.yaml" %}
 ```yaml
@@ -240,8 +242,6 @@ Unfortunately, Google does not provide APIs for many of its services, and that i
   some-field: 123
 ```
 {% endcode %}
-
-**Filename must start with `google-scholar`.**
 
 ## Periodic updates
 

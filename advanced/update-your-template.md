@@ -2,7 +2,9 @@
 
 If the template has been updated since you first created your website from it, you may want to pull in the updates.&#x20;
 
-[📋 TEMPLATE CHANGELOG](https://github.com/greenelab/lab-website-template/blob/main/CHANGELOG.md)
+✨ [LATEST VERSION](https://github.com/greenelab/lab-website-template/blob/main/CITATION.cff)&#x20;
+
+📋 [CHANGELOG](https://github.com/greenelab/lab-website-template/blob/main/CHANGELOG.md)
 
 {% hint style="info" %}
 Because this is a template and not an installable package, updating it can unfortunately be a little difficult. We can [help you](../introduction/support.md) if you have trouble.

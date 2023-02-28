@@ -1,10 +1,10 @@
 # Custom components
 
-The template comes with the [a few placeholder data lists and matching components](../basics/components/list.md#data-and-components) for common needs, but advanced users can make their own. Here's an example of doing that.
+The template comes with a [few placeholder data lists and matching components for common needs](../basics/repo-structure.md#data-and-components), but advanced users can make their own. Here's an example of doing that.
 
 Let's say we want to have a page that lists the talks we've given at various places.
 
-1. We'll start with a data file to cleanly list and manage the key details of each talk. Notice that these field names aren't something you'll see in any of the included components.
+1. We'll start with a [data file](data-and-collections.md) to cleanly list and manage the key details of each talk. Notice that these field names aren't something you'll see in any of the included components.
 
 {% code title="/_data/talks.yaml" %}
 ```yaml

@@ -20,19 +20,10 @@ Takes a list of data, filters it, loops through it, and displays each item with 
 | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `data`      | The [set of items](../../advanced/data-and-collections.md) to loop through, e.g. `citations`, `posts`, `members`, etc. If your list has `date` fields, it is also sorted from newest to oldest, and grouped into sections by year.                                                                          |
 | `component` | The component to show for each item in the list. The fields in your `data` should match what this component takes as parameters (except for `style`, see below).                                                                                                                                            |
-| `filters`   | Filter your `data` by certain fields and values. See detailed explanation below.                                                                                                                                                                                                                            |
+| `filters`   | Filter your `data` by arbitrary fields and values. See detailed explanation below.                                                                                                                                                                                                                          |
 | `style`     | A `style` parameter to pass through to every component in the list, so you don't have to repetitively set it on every `data` item. This is the only field that works this way, because all other fields are likely to be different for each item, but you'll likely always want the same `style` parameter. |
 
-## Data and components
-
-Technically you can use [any](../../advanced/custom-components.md) structure of `data` and any `component` with the list, but by default, the template comes with the a few placeholder data lists and matching components for common needs:
-
-| Data                                | Matching component |
-| ----------------------------------- | ------------------ |
-| Citations (`/_data/citations.yaml`) | `citation`         |
-| Projects (`/_data/projects.yaml`)   | `card`             |
-| Team members (`/_members`)          | `portrait`         |
-| Blog posts (`/_posts`)              | `post-excerpt`     |
+Technically you can use [any](../../advanced/custom-components.md) structure of `data` and any `component` with the list component, but by default, the template comes with a [few placeholder data lists and matching components for common needs](../repo-structure.md#data-and-components).
 
 ## Filters
 

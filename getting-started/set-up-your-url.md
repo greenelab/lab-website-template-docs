@@ -14,7 +14,7 @@ To set this up, follow the [instructions here](https://docs.github.com/en/github
 
 1. Purchase a domain name from a reputable service.
 2. Point your domain name provider to GitHub Pages using an `A` record. This is slightly different for each provider; they should have their own instructions on how to do it.
-3. Set the `custom domain` field in your repo's "[⚙️](https://emojipedia.org/gear/) Settings".
+3. Set the `custom domain` field in your repo's "⚙️ Settings".
 {% endtab %}
 
 {% tab title="User/org Site" %}
@@ -24,7 +24,7 @@ Example URL:\
 \
 ...where `your-lab` is your GitHub user/organization name
 
-To set this up, rename your repo to `your-lab.github.io` in your repo "[⚙️](https://emojipedia.org/gear/) Settings", and that's it!
+To set this up, rename your repo to `your-lab.github.io` in your repo "⚙️ Settings", and that's it!
 {% endtab %}
 
 {% tab title="Project site (default)" %}
@@ -38,4 +38,4 @@ This is where your live site appears by default when you enable GitHub Pages.
 {% endtab %}
 {% endtabs %}
 
-After making any needed changes above, wait a bit (\~30 seconds to 3 minutes) for your live site to redeploy to its new location. (You can check your repo's "[▶️](https://emojipedia.org/play-button/) Actions" for status.)
+After making any needed changes above, wait a bit (\~30 seconds to 3 minutes) for your live site to redeploy to its new location. (You can check your repo's "▶️ Actions" for status.)

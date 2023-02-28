@@ -22,11 +22,24 @@ The most important distinction to make is between **template content** ("under-t
 
 ## Images and other assets
 
-The template comes with a default `/images` folder to hold all your site's images, but you can organize your images however you'd like. For example, you could put photos of your team in `/team/photos/` and just refer to them like `team/photos/anna-sun.jpg`. You could also create `/videos` or any other folders you need for static assets and refer to them in the same way.
+The template comes with a default `/images` folder to hold all your site's images, but you can organize your images however you'd like. For example, you could put photos of your team in `/team/photos/` and just refer to them like `team/photos/anna-sun.jpg`.
+
+You could also create `/videos` or any other folders you need for static assets and refer to them in the same way.
 
 {% hint style="info" %}
-The only exception to this is your [logo files](use-your-logo.md), which the template expects to be in `/images`.
+The only exception to this is your [logo files](use-your-logo.md) and [fallback image](components/figure.md), which the template expects to be in `/images`.
 {% endhint %}
+
+## Data and components
+
+The template comes with a few placeholder [data lists](../advanced/data-and-collections.md) and matching [components](components/) for common needs:
+
+| Data/collection                                         | Matching component |
+| ------------------------------------------------------- | ------------------ |
+| [Citations](citations.md) (`/_data/citations.yaml`)     | `citation`         |
+| [Projects](components/card.md) (`/_data/projects.yaml`) | `card`             |
+| [Team members](team-members.md) (`/_members`)           | `portrait`         |
+| [Blog posts](blog-posts.md) (`/_posts`)                 | `post-excerpt`     |
 
 ## Full accounting
 
@@ -44,7 +57,7 @@ A piece-by-piece breakdown of the folders and files in the template. You don't h
 | `/_styles`                                                                           | Style files that determine how the site and [components](components/) look. Any Sass or CSS files you add here will automatically be included in your site. Sass files must contain a [front matter](edit-pages.md#edit-page-details) to be processed by Jekyll.                                                               |
 | `/.github`                                                                           | Files related to GitHub, mostly Actions workflows that perform automated tasks when you make changes to your repo.                                                                                                                                                                                                             |
 | <p><code>/blog</code><br><code>/contact</code><br><code>/research</code><br>etc.</p> | The [pages](edit-pages.md) of your site.                                                                                                                                                                                                                                                                                       |
-| `/images`                                                                            | The default folder for your site's images, and required folder for you [logos](use-your-logo.md).                                                                                                                                                                                                                              |
+| `/images`                                                                            | The default folder for your site's [images](repo-structure.md#images-and-other-assets).                                                                                                                                                                                                                                        |
 | `_config.yaml`                                                                       | [Basic settings and configuration for your site](configure-your-site.md), along with some advanced Jekyll settings.                                                                                                                                                                                                            |
 | `.gitignore`                                                                         | Files to not be tracked/included in your site's repo.                                                                                                                                                                                                                                                                          |
 | `404.md`                                                                             | When a visitor goes to a page on your site that doesn't exist, this page gets loaded instead.                                                                                                                                                                                                                                  |

@@ -45,7 +45,7 @@ There are other tools available to make your lab website. Here are some of them 
 
 ## Comparison with other code-based solutions
 
-The main benefit of this template is its [automatic citations](../basics/citations.md) from _just simple identifiers_. Other academic templates allow you to enter in a full bibliography manually, but this template is unique in that it uses [Manubot](https://manubot.org/) to fill in as many details as possible _automatically_. You can provide just a publication id. You can even enter in an author id and get a list of publications. If you only need a few citations, this isn't a big deal, but if you have [hundreds](https://greenelab.com/), it can be an enormous time saver.
+The main benefit of this template is its [automatic citations](../basics/citations.md) from _just simple identifiers_. Other academic templates allow you to enter in a full bibliography manually, but this template is unique in that it uses [Manubot](https://manubot.org/) to fill in as many details as possible _automatically_. You can provide just a publication id. You can even enter in an author id and get a list of publications. If you only need a few citations, this isn't a big deal, but if you have [hundreds](https://greenelab.com/research/), it can be an enormous time saver.
 
 There are things that other academic templates have that are not included in this template, but we are constantly assessing these differences and looking for ways we can improve. Ideally, the template will eventually be able to do most or everything that the other templates do, and more.
 

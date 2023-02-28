@@ -6,11 +6,11 @@ description: Optional cleanup
 
 The following is recommended to provide the cleanest experience for the maintainers and editors of your site. Much of this is just disabling unneeded features that GitHub enables by default to declutter the web interface.
 
-* On the main page of your repo, click the [⚙️](https://emojipedia.org/gear/) next to "About".
+* On the main page of your repo, click the ⚙️ next to "About".
   * Enter a short description, like "Source code for \[YOUR LAB] website".
   * Enter the link to your homepage, so people see it right at the top. Check your readme; it should've been automatically updated when you set up your URL!
   * Uncheck all boxes under "Include in the homepage". You likely don't need releases, packages, etc.
-* In your repo's [⚙️](https://emojipedia.org/gear/) Settings:
+* In your repo's "⚙️ Settings":
   * Uncheck "template repository" so people don't accidentally use your copy of the template instead of the template itself.
   * Uncheck "Wikis", "Discussions", and "Projects". You likely don't need these.
 

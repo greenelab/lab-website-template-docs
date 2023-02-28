@@ -19,9 +19,9 @@ You can search for terms, phrases, and tags:
 
 `term1 term2 "full phrase 1" "full phrase 2" "tag: some tag" "tag: another tag"`.
 
-Items that contain **all of the terms**, **at least one of the phrases**, and **at least one of the tags** will be considered a match. Search words will be highlighted in the results (if they're longer than 2 characters). Matching is case insensitive.
+Items that contain **all of the terms**, **at least one of the phrases**, and **at least one of the tags** will be considered a match. Matching is case insensitive. Tags are also insensitive to hyphens, e.g. `open science` is considered the same as `open-science`.
 
-In addition to the visible text content of the item, tooltip and other content are also searched (via the `data-tooltip` and `data-search` attributes).
+Search words will be highlighted in the results (if they're longer than 2 characters). In addition to the visible text content of the item, tooltip and other content are also searched (via the `data-tooltip` and `data-search` attributes).
 
 ## Relevant components
 

@@ -2,8 +2,6 @@
 
 [Markdown](https://commonmark.org/help/) is a way to write basic text content and formatting in a clean and simple way. Markdown `.md` files are plain text files that get converted into pages on your resulting website.
 
-[👁️ Preview](https://lab-website-template.netlify.app/testbed#basic-formatting)
-
 ## Links
 
 To an external site:
@@ -57,19 +55,9 @@ Jekyll automatically prepends the right baseurl
 
 </details>
 
-### Data, front-matter, components
-
-Specifying URLs in `/_data` files, front matters, [component](components/) parameters, etc. works differently than it does in Markdown content. The link to the page/image/etc. **must be relative to the root of your repo**. You cannot refer to files relative to the current file, or use the `..` to move up folders.
-
-```yaml
-- image: images/photo.jpg
-```
-
-```liquid
-{% raw %}
-{% include some-component.html image="images/photo.jpg" %}
-{% endraw %}
-```
+{% hint style="warning" %}
+When linking to an image/page/whatever in `/_data` files, front matters, or [components](components/), the URL **must start from the root of your repo**, e.g. `images/photo.jpg`. You cannot refer to files relative to the current file, or use the `..` to move up folders.
+{% endhint %}
 
 ## **Basic text styles**
 
@@ -179,12 +167,15 @@ This sentence has `inline code`, useful for making references to variables, pack
 
 In Markdown, you can attach an arbitrary CSS class to an element with the syntax `{:.class}`. Depending on the type of element, this code may have to go on the same line or on the next line.
 
-The template has a few utility classes for basic things.
+The template comes with a few alignment utility classes:
 
 ```markdown
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Lorem ipsum dolor sit amet.
+{:.left}
+Consectetur adipiscing elit.
 {:.center}
+Sed do eiusmod tempor incididunt.
+{:.right}
 ```
 
-Centers an element. Most things in the template are centered by default where appropriate, but sometimes you may want to attach this `center` utility class to an element to center it.
+Most things in the template are centered by default where appropriate, and left/right in a few other places where appropriate. But sometimes you may want to force the alignment of something.

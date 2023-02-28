@@ -77,7 +77,7 @@ Building your site is (surprisingly) not deterministic, because some of the pre-
 
 To run the [cite process](../basics/citations.md) locally:
 
-1. [Install Python](https://www.python.org/downloads/) (with PIP).
+1. [Install Python 3](https://www.python.org/downloads/) (with PIP).
 2. Go to the folder where you cloned your site, e.g. `cd your-lab-website`.
 3. Install needed Python packages by running `python -m pip install --upgrade --requirement ./_cite/requirements.txt`.
 4. Add or change the desired sources/papers in `/_data/sources.yaml`.

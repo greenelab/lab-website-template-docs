@@ -6,6 +6,14 @@
 Developed by the [Greene Lab](https://greenelab.com/).
 {% endembed %}
 
+{% hint style="success" %}
+This documentation always reflects the ✨ [LATEST VERSION](https://github.com/greenelab/lab-website-template/blob/main/CITATION.cff) of the template.
+{% endhint %}
+
+{% hint style="info" %}
+Coming from a pre-release version of the template? [See how to upgrade here](advanced/update-your-template.md).
+{% endhint %}
+
 ## Key Features
 
 * [🤖](https://emojipedia.org/robot/) Based on Git, GitHub, and Jekyll_._

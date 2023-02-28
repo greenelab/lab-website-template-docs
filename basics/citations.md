@@ -52,7 +52,7 @@ graph LR
 
   subgraph output
     citations([citations.yaml])
-    title[titles\nauthors\npublishers\netc...\ninput fields]
+    title[titles, authors, etc...\ninput fields]
   end
 
   sources --> merge

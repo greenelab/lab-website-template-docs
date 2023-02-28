@@ -2,7 +2,7 @@
 
 Jekyll provides two main ways to create and maintain large lists/sets of items: **data** and **collections**.&#x20;
 
-The template already includes [a few of these for commonly needed things](../basics/components/list.md#data-and-components), but if you need to create more/different ones, here's how.
+The template comes with [a few placeholder data lists for common needs](../basics/components/list.md#data-and-components), but if you need to create more/different ones, here's how.
 
 {% hint style="info" %}
 This page just explains how to make these lists. To actually display them on your site, use the [list component](../basics/components/list.md).

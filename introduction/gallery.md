@@ -4,9 +4,9 @@ description: Check out what other folks are building with the template!
 
 # Gallery
 
-[👁️ Live version of the template](https://greenelab.github.io/lab-website-template/)
+[👁️](https://greenelab.github.io/lab-website-template/) [Live version of the template](https://greenelab.github.io/lab-website-template/)
 
-[⭐ Submit your LWT-based website to be shown off here!](https://github.com/greenelab/lab-website-template/issues/97)
+[⭐](https://github.com/greenelab/lab-website-template/issues/97) [Submit your LWT-based website to be shown off here!](https://github.com/greenelab/lab-website-template/issues/97)
 
 {% hint style="info" %}
 Many or most of these might be using the old "pre-release" version of the template, which is more limited and looks significantly different.

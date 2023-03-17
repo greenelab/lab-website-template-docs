@@ -4,6 +4,8 @@ description: An image, title, some text, and link
 
 # Feature
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#feature)
+
 Useful for your home page, where you want to highlight key points about your lab.
 
 ```liquid
@@ -17,11 +19,11 @@ Useful for your home page, where you want to highlight key points about your lab
 %}
 ```
 
-| Parameter | Description                                                                                                                                                                                                    | Default                      |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| image     | URL to an image for the feature.                                                                                                                                                                               |                              |
-| link      | URL to link to when clicking on the image.                                                                                                                                                                     |                              |
-| title     | "Headline" for the feature. A few words work best.                                                                                                                                                             |                              |
-| text      | Text to show below the heading. Using [Liquid's `capture` function](https://shopify.github.io/liquid/tags/variable/#capture), you can also give it markdown, other components, or any other arbitrary content. |                              |
-| flip      | Flip the order of icon and text.                                                                                                                                                                               | `false` (image left of text) |
+| Parameter | Description                                                                                              | Default                      |
+| --------- | -------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `image`   | URL to an image for the feature.                                                                         |                              |
+| `link`    | URL to link to when clicking on the image.                                                               |                              |
+| `title`   | "Headline" for the feature. A few words work best.                                                       |                              |
+| `text`    | Text to show below the heading. Can contain markdown. Accepts [arbitrary content](./#arbitrary-content). |                              |
+| `flip`    | Flip the order of icon and text.                                                                         | `false` (image left of text) |
 

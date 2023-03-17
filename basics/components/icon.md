@@ -4,6 +4,8 @@ description: Font Awesome or custom SVG icon
 
 # Icon
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#icon)
+
 ```liquid
 {%
   include icon.html

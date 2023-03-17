@@ -12,6 +12,8 @@ Because this is a template and not an installable package, updating it can unfor
 
 {% hint style="info" %}
 If you are coming from a pre-release version of the template, it may be easier and less error-prone to just start from scratch. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site to your new site. We know this is frustrating, but we think the upgrade is worth it.
+
+If you don't start from scratch, make sure to still follow the [setup instructions](../getting-started/set-up-your-site.md). `v1.0.0` works significantly different than pre-release, and your template will be missing important files and configuration.
 {% endhint %}
 
 ## Begin a merge

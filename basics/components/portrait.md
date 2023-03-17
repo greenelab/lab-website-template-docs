@@ -4,6 +4,8 @@ description: A portrait for a team member, with image, link, name, and role
 
 # Portrait
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#portrait)
+
 Typically you'd use this with the [list](list.md) component, which would automatically read from `members` and pass this component the parameters. But you can also use it stand-alone to manually display individual members:
 
 ```liquid

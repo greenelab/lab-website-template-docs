@@ -4,6 +4,8 @@ description: A section break with customizable styling
 
 # Section
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#section)
+
 Use this component to create a section break – i.e. end the previous section of content and start a new one – and style the next section. If you want to style the first section on a page, just put this component before any other content.
 
 ```liquid

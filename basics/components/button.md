@@ -4,6 +4,8 @@ description: A button with icon and text
 
 # Button
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#button)
+
 ```liquid
 {%
   include button.html

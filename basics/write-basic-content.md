@@ -1,5 +1,7 @@
 # Write basic content
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#basic-formatting)
+
 [Markdown](https://commonmark.org/help/) is a way to write basic text content and formatting in a clean and simple way. Markdown `.md` files are plain text files that get converted into pages on your resulting website.
 
 ## Links
@@ -109,13 +111,21 @@ A comment in Liquid
 3. ordered list item 3
 ```
 
+## Images
+
+```
+![plain image](/images/photo.jpg)
+```
+
+For most purposes, prefer using the more richly featured (e.g. captions) and styled [figure](components/figure.md) component instead.
+
 ## **Headings**
 
 ```markdown
-# Top level heading
-## Secondary heading
-### Very specific heading
-#### Even more specific heading
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
 ```
 
 ## **Horizontal rule**
@@ -165,7 +175,7 @@ This sentence has `inline code`, useful for making references to variables, pack
 
 ## **Util classes**
 
-In Markdown, you can attach an arbitrary CSS class to an element with the syntax `{:.class}`. Depending on the type of element, this code may have to go on the same line or on the next line.
+In Markdown, you can attach an arbitrary [CSS](../advanced/background-knowledge.md) class to an element with the syntax `{:.class}`. Depending on the type of element, this code may have to go on the same line or on the next line.
 
 The template comes with a few alignment utility classes:
 

@@ -4,7 +4,9 @@ description: A generic and flexible way to automatically list large sets of item
 
 # List
 
-Takes a list of data, filters it, loops through it, and displays each item with a component of choice.
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#list)
+
+Takes a list of data, filters it, loops through it, and displays each item with some component.
 
 ```liquid
 {%

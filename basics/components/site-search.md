@@ -4,6 +4,8 @@ description: A site wide search using Google
 
 # Site Search
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#site-search)
+
 A simple search box that links to a Google search of your site.
 
 ```liquid

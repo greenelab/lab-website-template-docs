@@ -6,6 +6,8 @@ description: >-
 
 # Citation
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#citation)
+
 Typically you'd use this with the [list](list.md) component, which would automatically read from `citations.yaml` and pass this component the appropriate parameters. But you can also use it stand-alone to manually display individual citations:
 
 ```liquid

@@ -4,6 +4,8 @@ description: An excerpt and info from a blog post
 
 # Post Excerpt
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#post-excerpt)
+
 Typically you'd use this with the [list](list.md) component, which would automatically read from `posts` and pass this component the parameters. But you can also use it stand-alone to manually display individual posts:
 
 ```liquid

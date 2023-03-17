@@ -12,7 +12,8 @@
 * [Set up your site](getting-started/set-up-your-site.md)
 * [Set up your URL](getting-started/set-up-your-url.md)
 * [Tidy up your repo](getting-started/tidy-up-your-repo.md)
-* [Edit your site](getting-started/edit-your-site.md)
+* [Change your site](getting-started/change-your-site.md)
+* [Preview your site](getting-started/preview-your-site.md)
 
 ## Basics
 
@@ -36,6 +37,7 @@
   * [Card](basics/components/card.md)
   * [Portrait](basics/components/portrait.md)
   * [Post Excerpt](basics/components/post-excerpt.md)
+  * [Alert](basics/components/alert.md)
   * [Tags](basics/components/tags.md)
   * [Float](basics/components/float.md)
   * [Grid](basics/components/grid.md)

@@ -11,25 +11,33 @@ The template comes with many pre-made components so you can assemble your websit
 Simply place the code for a component in one of your markdown files, and it will appear in your site. The basic syntax for including a component is:
 
 ```liquid
+...some content...
+
 {% raw %}
 {% include some-component.html parameter="value" %}
 {% endraw %}
+
+...more content...
 ```
 
 {% hint style="info" %}
 Unless noted otherwise, all component parameters are optional and have graceful fallbacks if not specified.
 {% endhint %}
 
-Example of including an image with a caption:
+## Arbitrary content
+
+Some component parameters allow you to pass complex, arbitrary content to them, such as plain text, multiple paragraphs, Markdown, and even other components.
+
+To do this, you have to use [Liquid's capture tag](https://shopify.github.io/liquid/tags/variable/#capture) first. Example:
 
 ```liquid
-Some regular Markdown content. Lorem ipsum dolor sit amet.
+{% raw %}
+{% capture some-content %}
+  Some text.
+  _Some_ **Markdown**.
+  {% include another-component.html %}
+{% end capture %}
 
-{%
-  include figure.html
-  image="images/group-photo.jpg"
-  caption="The team at our annual Christmas party, 2025"
-  link="team-page"
-  width="400px"
-%}
+{% include some-component.html some-param=some-content %}
+{% endraw %}
 ```

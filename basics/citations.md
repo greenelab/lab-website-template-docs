@@ -6,21 +6,17 @@ The template is able to do this thanks to [Manubot](https://github.com/manubot/m
 
 {% embed url="https://manubot.org/" %}
 
-## Introduction
+## How it works
 
 First let's define some consistent terminology to make things easier to explain:
 
 * **source** - A paper, book, article, web page, film, or any other published item you want to cite.
 * **metasource** - A single item that lists multiple sources, like how an author's [ORCID number](https://orcid.org/) can be used to get a list of their published works.
-* **citation** - Detailed information about a source, like title, author(s), publisher, publish date, URL,  etc.
+* **citation** - Full, detailed information about a source, like title, author(s), publisher, publish date, URL,  etc.
 
-You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like!
+For most content on your site, you just need change the contents of the appropriate file. Citations have a special additional step. When you add new sources or metasources to be cited, the template has to run a special "cite process" to generate your full citations.
 
-For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few special papers by various members in your lab that you want to highlight.
-
-## How it works
-
-At a high level, here's how automatic citations work:
+At a high level, here's how it all works:
 
 ```mermaid
 %%{
@@ -55,6 +51,10 @@ graph LR
     title[titles, authors, etc...\ninput fields]
   end
 
+  subgraph site
+    display[citation component\nlist component]
+  end
+
   sources --> merge
   orcid --> expand
   etc --> expand
@@ -62,6 +62,7 @@ graph LR
   merge --> manubot
   manubot --> preserve
   preserve --> citations
+  citations --> display
 
   classDef node fill:#38bdf8,stroke:none,color:white
   classDef cluster fill:#e0f2fe,stroke:white,stroke-width:3px
@@ -73,10 +74,11 @@ graph LR
   class cite, cite
   class output, output
   class title, title
+  class display, title
 ```
 
 1. Input your sources and metasources in `/_data` files, e.g. `sources-2020.yaml`, `orcid-students.yaml`, etc.
-2. Run the **cite process** – either [automatically (on GitHub)](../getting-started/edit-your-site.md#citations) or [manually (locally)](../getting-started/edit-your-site.md#citations-1) – to convert your sources and metasources to full citations.
+2. The **cite process** runs – either [on GitHub](../getting-started/preview-your-site.md#on-github-remotely) or [locally](../getting-started/preview-your-site.md#on-your-computer-locally) – to convert your sources and metasources to full citations.
 3. The cite process outputs a single `citations.yaml` file in `/_data`.
 4. Display and filter citations on your site with the [list](components/list.md) and [citation](components/citation.md) components.
 
@@ -88,15 +90,17 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 
 <summary>The cite process in detail...</summary>
 
-1. Each source/metasource file gets processed by the appropriate cite plugin based on filename prefix.
+1. Each source/metasource file gets processed by the appropriate cite plugin (see `/_cite/plugins`) based on filename prefix.
 2. In metasource files, each list entry gets expanded into a list of regular sources. Any fields you put in the original entry get copied to each source in the expanded list.
 3. In source files, each list entry stays as-is.
-4. Metadata about the cite process is attached to each source, like which input source or metasource file it originated from and which cite plugin it ran with.
+4. Metadata about the cite process is attached to each source, like which input file it originated from and which cite plugin it ran with.
 5. A full list of regular sources is compiled, with duplicates merged together by `id`.
 6. Manubot generates full citation details for each source that has an `id`.
 7. Any field originally on each source is preserved.
 
 </details>
+
+You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like! For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few special papers by various members in your lab that you want to highlight.
 
 ## Examples
 
@@ -147,7 +151,7 @@ Optionally, you can manually pass extra "rich" details that the template can dis
 | Parameter     | Description                                                                                                                                           |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `type`        | <p>The type of the source. Determines the icon to show.<br><br>See <code>/_data/types.yaml</code> for what types are built-in or to add your own.</p> |
-| `description` | Brief description of the source. Accepts Markdown.                                                                                                    |
+| `description` | Brief description of the source. Can contain Markdown.                                                                                                |
 | `image`       | URL to a striking image for the source. Highly recommended. Displays as a thumbnail next to the citation details.                                     |
 | `buttons`     | List of [buttons](components/button.md) to show underneath the citation details.                                                                      |
 | `tags`        | List of [tags](components/tags.md) to show underneath the citation details.                                                                           |
@@ -232,7 +236,7 @@ Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubM
 
 ### Google Scholar
 
-Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if running the [cite process on GitHub](../getting-started/edit-your-site.md#citations), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/edit-your-site.md#citations-1), put the same name/value in a `.env` file.
+Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if [running the cite process on GitHub](../getting-started/preview-your-site.md#on-github-remotely), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/preview-your-site.md#on-your-computer-locally), put the same name/value in a `.env` file.
 
 **Filename must start with `google-scholar`.**
 

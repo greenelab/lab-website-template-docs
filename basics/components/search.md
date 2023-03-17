@@ -1,5 +1,7 @@
 # Search
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#search)
+
 The template can dynamically (when a visitor comes to your site) filter items on a page based on a search.
 
 ## How can a search happen?

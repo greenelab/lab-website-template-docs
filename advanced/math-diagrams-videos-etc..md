@@ -1,5 +1,7 @@
 # Math, diagrams, videos, etc.
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#jekyll-spaceship)
+
 The template comes pre-installed with a versatile Jekyll plugin called Jekyll Spaceship.
 
 {% embed url="https://github.com/jeffreytse/jekyll-spaceship" %}

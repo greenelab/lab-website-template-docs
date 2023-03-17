@@ -4,6 +4,8 @@ description: A list of clickable tags
 
 # Tags
 
+:eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#tags)
+
 This component is automatically included in other components such as the [card](card.md) and [citation](citation.md). But you can also use it stand-alone to manually list a set of tags that a visitor can [filter the page by](search.md).
 
 ```liquid

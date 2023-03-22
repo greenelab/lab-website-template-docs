@@ -35,6 +35,7 @@ git merge template/main --allow-unrelated-histories
 Based on [this article](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork):
 
 ```bash
+git remote add upstream https://github.com/greenelab/lab-website-template
 git fetch upstream
 git merge upstream/main
 ```

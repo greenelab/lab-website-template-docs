@@ -10,11 +10,11 @@ If the template has been updated since you first created your website from it, y
 Because this is a template and not an installable package, updating it can unfortunately be a little difficult. We can [help you](../introduction/support.md) if you have trouble.
 {% endhint %}
 
-{% hint style="info" %}
-If you are coming from a pre-release version of the template, it may be easier and less error-prone to just start from scratch. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site to your new site. We know this is frustrating, but we think the upgrade is worth it.
+## From pre-release
 
-If you don't start from scratch, make sure to still follow the [setup instructions](../getting-started/set-up-your-site.md). `v1.0.0` works significantly different than pre-release, and your template will be missing important files and configuration.
-{% endhint %}
+If you are coming from a pre-release version of the template (< `v1.0.0`), we **strongly recommend** just starting from scratch and not even attempting the merge instructions below. It will be quicker, easier, and less error-prone. Forget everything you know, start a new copy of the template, read through and follow the new docs, and judiciously copy and modify code from your old site into your new site. _We know this is frustrating_, but we think the upgrade is worth it.
+
+If you can't or don't want to start from scratch, go through the merge instructions below, then go run the [setup instructions](../getting-started/set-up-your-site.md) and [custom domain instructions](../getting-started/set-up-your-url.md) if applicable.
 
 ## Begin a merge
 

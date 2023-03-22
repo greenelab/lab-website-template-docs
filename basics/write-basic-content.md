@@ -15,7 +15,7 @@ To an external site:
 To a page within your site:
 
 ```markdown
-[Meet our team!](team)
+[Meet our team!](/team)
 ```
 
 The example above works in most cases, because your site is likely to only have top-level pages and the URL is relative to the current page. If you have sub-pages or more complex linking needs, see below.

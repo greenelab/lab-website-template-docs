@@ -26,10 +26,10 @@ A list of items to arrange in a grid. Wraps on smaller screen sizes. Compared to
 %}
 ```
 
-| Parameter | Description                                                                               | Default         |
-| --------- | ----------------------------------------------------------------------------------------- | --------------- |
-| `content` | [Arbitrary content](./#arbitrary-content) made up of separate items to arrange in a grid. |                 |
-| `style`   | Visual style of the grid. Set to `square` to force the items to have a 1:1 aspect ratio.  | Items auto-size |
+| Parameter | Description                                                                                                                                                                        | Default         |
+| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| `content` | [Arbitrary content](./#arbitrary-content) made up of separate items to arrange in a grid.                                                                                          |                 |
+| `style`   | Visual style of the grid. Set to `square` to force the items to have a 1:1 aspect ratio. If using [figure](figure.md) components, you probably want to set their widths to `100%`. | Items auto-size |
 
 You can also pass plain Markdown images to this component. You may want to do this if you want to show images, such as a group of logos, without any of the styling that comes with the figure component (e.g. shadow).
 

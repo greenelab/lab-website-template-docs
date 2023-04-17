@@ -1,13 +1,21 @@
 # Update your template
 
-If the template has been updated since you first created your website from it, you may want to pull in the updates.&#x20;
+If the template has been updated since you first created your website from it, you may want to pull in the updates.
 
-✨ [LATEST VERSION](https://github.com/greenelab/lab-website-template/blob/main/CITATION.cff)&#x20;
+👤 _Your version of the template_ is located in the `CITATION.cff` file in your website repo.
 
-📋 [CHANGELOG](https://github.com/greenelab/lab-website-template/blob/main/CHANGELOG.md)
+✨ The _latest version_ of the template can be found in the main [`CITATION.cff` file here](https://github.com/greenelab/lab-website-template/blob/main/CITATION.cff).
+
+📋 A high-level _description of changes for each version_ can be found in the main [`CHANGELOG.md` file here](https://github.com/greenelab/lab-website-template/blob/main/CHANGELOG.md).
 
 {% hint style="info" %}
 Because this is a template and not an installable package, updating it can unfortunately be a little difficult. We can [help you](../introduction/support.md) if you have trouble.
+{% endhint %}
+
+{% hint style="info" %}
+For convenience and familiarity, we also duplicate the latest template version in GitHub [tags](https://github.com/greenelab/lab-website-template/tags) and [releases](https://github.com/greenelab/lab-website-template/releases), but we consider the `CITATION.cff` file to be the _source of truth_ for the version.\
+\
+Tags/releases do not get transferred when [generating from a template](../getting-started/set-up-your-site.md), and comparing commit hashes is not ergonomic, so we opted to have the version explicitly specified in a file the user should always keep in their repo.
 {% endhint %}
 
 ## From pre-release

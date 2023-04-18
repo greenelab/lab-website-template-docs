@@ -34,8 +34,8 @@ The `filters` parameter is a comma separated list of field/value filters, like `
 The `field` is the particular field/key of the data item to check. The `value` is the value to compare against. `value` can be:
 
 * A plain string for an exact match.
-* [Ruby-flavored regex](https://docs.ruby-lang.org/en/master/Regexp.html) string for more complex matching.
 * Blank to match unspecified fields.
+* [Ruby-flavored regex](https://docs.ruby-lang.org/en/master/Regexp.html) string for more complex matching.
 
 ### Examples
 
@@ -43,5 +43,6 @@ The `field` is the particular field/key of the data item to check. The `value` i
 | -------------------------------- | --------------------------------------------------------- |
 | `role: programmer, alumni: true` | `role` equal to `programmer` AND `alumni` equal to `true` |
 | `category:`                      | no specified `category`                                   |
+| `description: .+`                | some specified/defined `description`                      |
 | `date: ^2020`                    | `date` starting with `2020`                               |
 | `role: ^(?!pi$)`                 | `role` NOT equal to `pi`                                  |

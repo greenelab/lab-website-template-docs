@@ -13,6 +13,4 @@ description: Font Awesome or custom SVG icon
 %}
 ```
 
-| Parameter | Description                                                                                                                                                                          |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `icon`    | Full class name of [Font Awesome free icon](https://fontawesome.com/search?o=r\&m=free), e.g. `fa-brands fa-github`, or name of a custom icon SVG in `/_includes`, e.g. `orcid.svg`. |
+<table><thead><tr><th width="129">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>icon</code></td><td>Full class name of <a href="https://fontawesome.com/search?o=r&#x26;m=free">Font Awesome free icon</a>, e.g. <code>fa-brands fa-github</code>, or name of a custom icon SVG in <code>/_includes</code>, e.g. <code>orcid.svg</code>.</td></tr></tbody></table>

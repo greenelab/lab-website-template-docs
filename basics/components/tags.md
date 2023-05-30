@@ -17,8 +17,4 @@ This component is automatically included in other components such as the [card](
 %}
 ```
 
-| Parameter | Description                                                                                                                                                   | Default      |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| `tags`    | List of tags to display. Can be a comma-separated string or an array.                                                                                         |              |
-| `repo`    | GitHub repository to automatically fetch additional ["tags"](https://github.com/topics) from. Just user/org name and repo name, e.g. `greenelab/deep-review`. |              |
-| `link`    | What page of your site to go to when clicking on a tag. The template will go to this page and [search](search.md) for items that have that tag.               | Current page |
+<table><thead><tr><th width="137">Parameter</th><th width="461">Description</th><th>Default</th></tr></thead><tbody><tr><td><code>tags</code></td><td>List of tags to display. Can be a comma-separated string or an array.</td><td></td></tr><tr><td><code>repo</code></td><td>GitHub repository to automatically fetch additional <a href="https://github.com/topics">"tags"</a> from. Just user/org name and repo name, e.g. <code>greenelab/deep-review</code>.</td><td></td></tr><tr><td><code>link</code></td><td>What page of your site to go to when clicking on a tag. The template will go to this page and <a href="search.md">search</a> for items that have that tag.</td><td>Current page</td></tr></tbody></table>

@@ -10,11 +10,7 @@ The pages and sub-pages on your site [come from the folder and file structure of
 
 Examples:
 
-| Type     | URL you want             | Folders and files to create |
-| -------- | ------------------------ | --------------------------- |
-| Homepage | `yoursite.com/`          | `index.md`                  |
-| Page     | `yoursite.com/awards`    | `/awards/index.md`          |
-| Sub-page | `yoursite.com/team/join` | `/team/join/index.md`       |
+<table><thead><tr><th width="139">Type</th><th width="267.3333333333333">URL you want</th><th>Folders and files to create</th></tr></thead><tbody><tr><td>Homepage</td><td><code>yoursite.com/</code></td><td><code>index.md</code></td></tr><tr><td>Page</td><td><code>yoursite.com/awards</code></td><td><code>/awards/index.md</code></td></tr><tr><td>Sub-page</td><td><code>yoursite.com/team/join</code></td><td><code>/team/join/index.md</code></td></tr></tbody></table>
 
 To add or remove a page, simply create or delete the corresponding folder and Markdown file in your repo.
 
@@ -48,16 +44,7 @@ redirect_from:
 Page content.
 ```
 
-| Parameter                     | Description                                                                                                                      | Default                                                 |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- |
-| `title`                       | Title of the page. Shown in the tab name along with your [site title](configure-your-site.md), e.g. "Awards \| Your Lab Website" |                                                         |
-| `description`                 | Description of the page that will show under search engine results.                                                              | [Site-wide description](configure-your-site.md)         |
-| `nav`                         | If this field is present, the page will appear in the header navigation bar, with the same name as the page's title.             |                                                         |
-| `nav` -> `order`              | How the page should be ordered in the nav bar. Number value, lowest to highest -> left to right.                                 |                                                         |
-| `nav` -> `tooltip`            | Text to show when hovering over the page's nav bar link.                                                                         |                                                         |
-| `header`/`footer`             | Background image for the header/footer of the page.                                                                              | [Site-wide header/footer image](configure-your-site.md) |
-| `header-dark` / `footer-dark` | Header/footer dark/light mode of the page.                                                                                       | [Site-wide header/footer mode](configure-your-site.md)  |
-| `redirect_from`               | When a user visits one of the URLs listed, they'll be redirected to this page instead.                                           |                                                         |
+<table><thead><tr><th width="185">Parameter</th><th width="374.3333333333333">Description</th><th>Default</th></tr></thead><tbody><tr><td><code>title</code></td><td>Title of the page. Shown in the tab name along with your <a href="configure-your-site.md">site title</a>, e.g. "Awards | Your Lab Website"</td><td></td></tr><tr><td><code>description</code></td><td>Description of the page that will show under search engine results.</td><td><a href="configure-your-site.md">Site-wide description</a></td></tr><tr><td><code>nav</code></td><td>If this field is present, the page will appear in the header navigation bar, with the same name as the page's title.</td><td></td></tr><tr><td><code>nav</code> -> <code>order</code></td><td>How the page should be ordered in the nav bar. Number value, lowest to highest -> left to right.</td><td></td></tr><tr><td><code>nav</code> -> <code>tooltip</code></td><td>Text to show when hovering over the page's nav bar link.</td><td></td></tr><tr><td><code>header</code>/<code>footer</code></td><td>Background image for the header/footer of the page.</td><td><a href="configure-your-site.md">Site-wide header/footer image</a></td></tr><tr><td><code>header-dark</code> / <code>footer-dark</code></td><td>Header/footer dark/light mode of the page. </td><td><a href="configure-your-site.md">Site-wide header/footer mode</a></td></tr><tr><td><code>redirect_from</code></td><td>When a user visits one of the URLs listed, they'll be redirected to this page instead.</td><td></td></tr></tbody></table>
 
 {% hint style="info" %}
 Headers/footers/sections have a solid color that overlays any background image to always maintain readability of text.

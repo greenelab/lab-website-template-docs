@@ -23,6 +23,4 @@ A set of equal-width columns with content, up to a maximum of 3. Columns are ver
 %}
 ```
 
-| Parameter       |                                                                                                                                                                                                 |
-| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `col1` / or any | The content of the column. Param names can be anything. Up to 3 columns will be displayed in same order as parameters. Can contain Markdown. Accepts [arbitrary content](./#arbitrary-content). |
+<table><thead><tr><th width="158">Parameter</th><th></th></tr></thead><tbody><tr><td><code>col1</code> / or any</td><td>The content of the column. Param names can be anything. Up to 3 columns will be displayed in same order as parameters. Can contain Markdown. Accepts <a href="./#arbitrary-content">arbitrary content</a>.</td></tr></tbody></table>

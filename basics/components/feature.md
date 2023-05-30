@@ -19,11 +19,5 @@ Useful for your home page, where you want to highlight key points about your lab
 %}
 ```
 
-| Parameter | Description                                                                                              | Default                      |
-| --------- | -------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `image`   | URL to an image for the feature.                                                                         |                              |
-| `link`    | URL to link to when clicking on the image.                                                               |                              |
-| `title`   | "Headline" for the feature. A few words work best.                                                       |                              |
-| `text`    | Text to show below the heading. Can contain markdown. Accepts [arbitrary content](./#arbitrary-content). |                              |
-| `flip`    | Flip the order of icon and text.                                                                         | `false` (image left of text) |
+<table><thead><tr><th width="127">Parameter</th><th width="467">Description</th><th>Default</th></tr></thead><tbody><tr><td><code>image</code></td><td>URL to an image for the feature.</td><td></td></tr><tr><td><code>link</code></td><td>URL to link to when clicking on the image.</td><td></td></tr><tr><td><code>title</code></td><td>"Headline" for the feature. A few words work best.</td><td></td></tr><tr><td><code>text</code></td><td>Text to show below the heading. Can contain markdown. Accepts <a href="./#arbitrary-content">arbitrary content</a>.</td><td></td></tr><tr><td><code>flip</code></td><td>Flip the order of icon and text.</td><td><code>false</code> (image left of text)</td></tr></tbody></table>
 

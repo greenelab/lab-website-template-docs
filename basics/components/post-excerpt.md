@@ -15,7 +15,4 @@ Typically you'd use this with the [list](list.md) component, which would automat
 %}
 ```
 
-| Parameter      | Description                                                                                                                         |
-| -------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `lookup`       | Lookup post details from `posts` by filename, without the `YYYY-MM-DD-` date prefix or `.md` extension.                             |
-| `title` / etc. | The same parameters outlined in [blog posts](../blog-posts.md). Retrieved from lookup, or passed automatically from list component. |
+<table><thead><tr><th width="171.33333333333331">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>lookup</code></td><td>Lookup post details from <code>posts</code> by filename, without the <code>YYYY-MM-DD-</code> date prefix or <code>.md</code> extension.</td></tr><tr><td><code>title</code> / etc.</td><td>The same parameters outlined in <a href="../blog-posts.md">blog posts</a>. Retrieved from lookup, or passed automatically from list component.</td></tr></tbody></table>

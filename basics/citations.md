@@ -118,9 +118,7 @@ You can mix and match as many sources and metasources as you want, and display t
 ```
 {% endcode %}
 
-| Parameter | Description                                                                                                                                                                                                                                                                |
-| --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `id`      | Identifier for the source that [Manubot can understand and cite](https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155). If Manubot is unable to generate a citation for this ID, the template will log an error message and exit with an error code. |
+<table><thead><tr><th width="140">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code></td><td>Identifier for the source that <a href="https://github.com/manubot/manubot/blob/main/manubot/cite/handlers.py#L155">Manubot can understand and cite</a>. If Manubot is unable to generate a citation for this ID, the template will log an error message and exit with an error code.</td></tr></tbody></table>
 
 ### Rich details
 
@@ -148,14 +146,7 @@ Optionally, you can manually pass extra "rich" details that the template can dis
 ```
 {% endcode %}
 
-| Parameter     | Description                                                                                                                                           |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type`        | <p>The type of the source. Determines the icon to show.<br><br>See <code>/_data/types.yaml</code> for what types are built-in or to add your own.</p> |
-| `description` | Brief description of the source. Can contain Markdown.                                                                                                |
-| `image`       | URL to a striking image for the source. Highly recommended. Displays as a thumbnail next to the citation details.                                     |
-| `buttons`     | List of [buttons](components/button.md) to show underneath the citation details.                                                                      |
-| `tags`        | List of [tags](components/tags.md) to show underneath the citation details.                                                                           |
-| `repo`        | GitHub repository to automatically fetch additional [tags](components/tags.md) from.                                                                  |
+<table><thead><tr><th width="205">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>type</code></td><td>The type of the source. Determines the icon to show.<br><br>See <code>/_data/types.yaml</code> for what types are built-in or to add your own.</td></tr><tr><td><code>description</code></td><td>Brief description of the source. Can contain Markdown.</td></tr><tr><td><code>image</code></td><td>URL to a striking image for the source. Highly recommended. Displays as a thumbnail next to the citation details.</td></tr><tr><td><code>buttons</code></td><td>List of <a href="components/button.md">buttons</a> to show underneath the citation details.</td></tr><tr><td><code>tags</code></td><td>List of <a href="components/tags.md">tags</a> to show underneath the citation details.</td></tr><tr><td><code>repo</code></td><td>GitHub repository to automatically fetch additional <a href="components/tags.md">tags</a> from.</td></tr></tbody></table>
 
 {% hint style="info" %}
 Always provide a good thumbnail for your publications. Use a figure from the source, or if there are none, a journal logo or issue cover. [Here are some best practices for making a good thumbnail image](https://github.com/manubot/catalog#thumbnail-guidelines).
@@ -186,9 +177,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 ```
 {% endcode %}
 
-| Parameter                                           | Description                                                                                                                                                         |
-| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `title` / `authors` / `publisher` / `date` / `link` | Basic citation information normally returned from Manubot and displayed by the [citation](components/citation.md) component. Date should be in `YYYY-MM-DD` format. |
+<table><thead><tr><th width="208">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code> / <code>authors</code> / <code>publisher</code> / <code>date</code> / <code>link</code></td><td>Basic citation information normally returned from Manubot and displayed by the <a href="components/citation.md">citation</a> component. Date should be in <code>YYYY-MM-DD</code> format.</td></tr></tbody></table>
 
 If you don't provide an `id`, Manubot has nothing to cite and so doesn't run. You'd only want to do this if manually providing all the citation details manually. This defeats the main benefit of the template, but is sometimes necessary.
 

@@ -16,8 +16,4 @@ Typically you'd use this with the [list](list.md) component, which would automat
 %}
 ```
 
-| Parameter     | Description                                                                                                                             |
-| ------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| `lookup`      | Lookup member details from `members` by filename, without the `.md` extension.                                                          |
-| `style`       | Visual style of the portrait. Set to `small` to make it a bit smaller, or set to `tiny` to make it very small and horizontal layout.    |
-| `name` / etc. | The same parameters outlined in [team members](../team-members.md). Retrieved from lookup, or passed automatically from list component. |
+<table><thead><tr><th width="140">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>lookup</code></td><td>Lookup member details from <code>members</code> by filename, without the <code>.md</code> extension.</td></tr><tr><td><code>style</code></td><td>Visual style of the portrait. Set to <code>small</code> to make it a bit smaller, or set to <code>tiny</code> to make it very small and horizontal layout.</td></tr><tr><td><code>name</code> / etc.</td><td>The same parameters outlined in <a href="../team-members.md">team members</a>. Retrieved from lookup, or passed automatically from list component.</td></tr></tbody></table>

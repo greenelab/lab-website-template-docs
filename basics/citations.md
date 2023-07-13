@@ -14,7 +14,7 @@ First let's define some consistent terminology to make things easier to explain:
 * **metasource** - A single item that lists multiple sources, like how an author's [ORCID number](https://orcid.org/) can be used to get a list of their published works.
 * **citation** - Full, detailed information about a source, like title, author(s), publisher, publish date, URL,  etc.
 
-For most content on your site, you just need change the contents of the appropriate file. Citations have a special additional step. When you add new sources or metasources to be cited, the template has to run a special "cite process" to generate your full citations.
+For most content on your site, you just need change the contents of the appropriate file. Citations have a special additional step. When you add new sources or metasources to be cited, **the template has to run a special "cite process" to generate your full citations**.
 
 At a high level, here's how it all works:
 

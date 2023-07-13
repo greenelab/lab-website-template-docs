@@ -14,11 +14,19 @@ The most important distinction to make is between **template content** ("under-t
 
 **In general**, here's how the files and folders in the template fall into these two categories. We've tried to keep these as separated as possible, within the limitations of Jekyll.
 
-| User content                                                                                                                | Template content                                                                                                                                                                        |
-| --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <p><code>/_data</code></p><p><code>/_members</code></p><p><code>/_posts</code></p><p><code>/_styles/-theme.scss</code></p>  | <p>Folders that start with <code>_</code><br><span data-gb-custom-inline data-tag="emoji" data-code="1f448">👈</span> ...except these</p>                                               |
-| <p>Folders that start with letters, like...<br><code>/blog</code><br><code>/images</code><br><code>/team</code><br>etc.</p> | Folders that start with `.`                                                                                                                                                             |
-| <p><code>_config.yaml</code> (top)<br><code>404.md</code><br><code>index.md</code><br><code>README.md</code></p>            | <p><code>_config.yaml</code> (bottom)<br><code>.gitignore</code><br><code>CITATION.cff</code></p><p><code>Gemfile</code></p><p><code>Gemfile.lock</code><br><code>LICENSE.md</code></p> |
+<table><thead><tr><th width="107.33333333333331"></th><th width="306">User content</th><th>Template content</th></tr></thead><tbody><tr><td><strong>Folders</strong></td><td><p><code>/blog</code><br><code>/images</code><br><code>/team</code><br>etc. (starting with letters)<br><br><code>/_data</code></p><p><code>/_members</code></p><p><code>/_posts</code><br>(<code>_</code> exceptions)</p></td><td><p><code>.github</code></p><p><code>.docker</code></p><p>etc. (starting with <code>.</code>)</p><p><br><code>_cite</code></p><p><code>_includes</code></p><p><code>_plugins</code></p><p>etc. (starting with <code>_</code>, except a few 👈)</p></td></tr><tr><td><strong>Files</strong></td><td><p><code>_config.yaml</code> (top portion of file)</p><p><code>/_styles/-theme.scss</code><br><code>404.md</code><br><code>index.md</code><br><code>README.md</code></p></td><td><p><code>_config.yaml</code> (bottom portion of file)<br><code>.gitignore</code><br><code>CITATION.cff</code></p><p><code>Gemfile</code></p><p><code>Gemfile.lock</code><br><code>LICENSE.md</code></p></td></tr></tbody></table>
+
+### Template repo only content
+
+There are a few files and folders that are needed for the `lab-website-template` repo itself, but don't belong in your generated/forked repo at all:
+
+* `CHANGELOG.md`
+* `testbed.md`
+* `.github/ISSUE_TEMPLATE`
+* `.github/workflows/versioning.yaml`
+* `.github/pull_request_template.md` (rename `user_pull_request_template.md` in its place)
+
+Keeping these files in your repo wont break anything per se, but they do increase clutter and confusion. The [first time setup](../getting-started/set-up-your-site.md) process automatically removes and renames these for you, but when [updating your template version](../advanced/update-your-template.md) be sure not to accidentally re-add them to your repo.
 
 ## Images and other assets
 

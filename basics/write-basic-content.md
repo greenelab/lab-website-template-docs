@@ -2,7 +2,7 @@
 
 :eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#basic-formatting)
 
-[Markdown](https://commonmark.org/help/) is a way to write basic text content and formatting in a clean and simple way. Markdown `.md` files are plain text files that get converted into pages on your resulting website.
+[Markdown](https://commonmark.org/help/) is a way to write basic text content and formatting in a clean and simple way. Markdown `.md` files are plain text files that get converted into `.html` pages on your resulting website.
 
 ## Links
 
@@ -15,10 +15,10 @@ To an external site:
 To a page within your site:
 
 ```markdown
-[Meet our team!](/team)
+[Meet our team!](team)
 ```
 
-The example above works in most cases, because your site is likely to only have top-level pages and the URL is relative to the current page. If you have sub-pages or more complex linking needs, see below.
+The example above works in most cases, because your site is likely to only have top-level pages and the URL is relative to the level of the current page. If you have sub-pages or more complex linking needs, see below.
 
 <details>
 
@@ -42,7 +42,7 @@ Page/sub-page, starting from root of website
 [Link text](/page/sub-page)
 ```
 
-But note that if you're writing a link relative to root (starting it with a `/`), and [the URL you set up](../getting-started/set-up-your-url.md) is not at root, e.g. `github.io/your-lab-website`, you'll need to prepend a "baseurl":
+But note, if starting from root (last examples above), you need to prepend your "baseurl", if the [URL you set up](../getting-started/set-up-your-url.md) has one (e.g. `your-lab.github.io/your-lab-website`):
 
 ```markdown
 Manually prepend baseurl
@@ -57,9 +57,45 @@ Jekyll automatically prepends the right baseurl
 
 </details>
 
-{% hint style="warning" %}
-When linking to an image/page/whatever in `/_data` files, front matters, or [components](components/), the URL **must start from the root of your repo**, e.g. `images/photo.jpg`. You cannot refer to files relative to the current file, or use the `..` to move up folders.
-{% endhint %}
+## Link parameters
+
+The above section shows how you can write links as plain text content. But you will probably more often be linking to images/pages/whatever using the template's [components](components/), [data lists](repo-structure.md#data-and-components), and [front matters](edit-pages.md#edit-page-details). In these cases, links work slightly differently.
+
+You can still link to an external, absolute URL, e.g. `https://some-website.org/`. But if you are trying to link to something within your repo, the URL **must start from the root of your repo**, without any site name/"baseurl" prefix. You also cannot refer to files relative to the current file, or use the `..` to move up folders.
+
+<mark style="color:green;">**✓ GOOD**</mark>
+
+<pre class="language-liquid"><code class="lang-liquid"><strong>{% include some-component.html image="images/photo.jpg" %}
+</strong></code></pre>
+
+<pre class="language-markdown"><code class="lang-markdown">---
+<strong>image: https://some-website.org/journal-cover.jpg
+</strong>---
+</code></pre>
+
+```yaml
+- id: 123
+  link: team/join
+```
+
+<mark style="color:red;">**✘ BAD**</mark>
+
+```liquid
+{% raw %}
+{% include some-component.html link="../images/photo.jpg" %}
+{% endraw %}
+```
+
+```markdown
+---
+image: ./image-in-current-folder.jpg
+---
+```
+
+```yaml
+- id: 123
+  link: /your-lab-website/team/join
+```
 
 ## **Basic text styles**
 

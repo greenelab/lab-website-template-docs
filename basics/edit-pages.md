@@ -22,7 +22,7 @@ The pages that come with this template – `/blog`, `/contact`, etc. – can be 
 
 ## **Edit page details**
 
-Markdown files can have a section at the top called a "[front matter](https://assemble.io/docs/YAML-front-matter.html)" to hold metadata about the page in YAML format. This is how you can pass special per-page details to the template.
+Markdown files can have a section at the top called a "front matter" to hold metadata about the page in YAML format. This is how you can pass special per-page details to the template.
 
 Example `index.md` page file:
 

@@ -165,7 +165,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 # manually provide all citation details
 - title: Some Publication Title
   authors:
-    - Steve McQueen
+    - **Steve McQueen**
     - Lightning McQueen
   publisher: bioRxiv
   date: 2021-01-01
@@ -177,7 +177,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 ```
 {% endcode %}
 
-<table><thead><tr><th width="208">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code> / <code>authors</code> / <code>publisher</code> / <code>date</code> / <code>link</code></td><td>Basic citation information normally returned from Manubot and displayed by the <a href="components/citation.md">citation</a> component. Date should be in <code>YYYY-MM-DD</code> format.</td></tr></tbody></table>
+<table><thead><tr><th width="208">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>title</code> / <code>authors</code> / <code>publisher</code> / <code>date</code> / <code>link</code></td><td>Basic citation information normally returned from Manubot and displayed by the <a href="components/citation.md">citation</a> component. Date should be in <code>YYYY-MM-DD</code> format. Authors can contain Markdown.</td></tr></tbody></table>
 
 If you don't provide an `id`, Manubot has nothing to cite and so doesn't run. You'd only want to do this if manually providing all the citation details manually. This defeats the main benefit of the template, but is sometimes necessary.
 
@@ -200,17 +200,27 @@ You can also attach arbitrary fields. The template won't explicitly use them, bu
 
 Each ORCID gets expanded into a full list of regular sources with `id`s. Any fields you put in the original entry get copied to each source in the expanded list. This applies to the other types of metasources below as well.
 
-Because the cite process merges duplicate sources by `id`, you can also use the [manual override method](citations.md#manual-override) above to manually correct sources returned from metasources. Example:
+Because the cite process merges duplicate sources by `id`, you can also use the [manual override method](citations.md#manual-override) above to manually correct sources returned from metasources. You can also use the special `remove` field to ignore a source returned from a metasource, discarding it from the citations output. Example:
 
 {% code title="/_data/sources.yaml" %}
 ```yaml
 # some paper returned by an ORCID with a wrong title
 - id: doi:123/456
   title: Correct Title
+
+# some paper returned by an ORCID that you don't want to keep at all
+- id: pubmed:123456
+  remove: true
 ```
 {% endcode %}
 
+{% hint style="info" %}
+If a metasource returns a source with a type of identifier that Manubot doesn't know how to cite, that source will be ignored. When this happens, the cite process prints a **warning**, not a critical error, so you'll have to check your CLI output or GitHub Actions logs.
+{% endhint %}
+
 ### PubMed
+
+_See ORCID above for general metasource functionality._
 
 Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubMed](https://pubmed.ncbi.nlm.nih.gov/) for terms. This is a brittle way to select an author's papers, very vulnerable to false positives. ORCID is recommended.
 
@@ -219,11 +229,12 @@ Uses [NCBI eutils](https://www.ncbi.nlm.nih.gov/books/NBK25500/) to search [PubM
 {% code title="/_data/pubmed.yaml" %}
 ```yaml
 - term: "Greene, C[Author] NOT Greene CE[Author]"
-  some-field: 123
 ```
 {% endcode %}
 
 ### Google Scholar
+
+_See ORCID above for general metasource functionality._
 
 Unfortunately, Google does not provide APIs for many of its services, and that includes Scholar. Luckily there is a 3rd-party API to access it, [SerpAPI](https://serpapi.com/). First you'll have to sign up and get an API key. Then, if [running the cite process on GitHub](../getting-started/preview-your-site.md#on-github-remotely), make a [new repository secret](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) named `GOOGLE_SCHOLAR_API_KEY` with your API key as its value, or if [running locally](../getting-started/preview-your-site.md#on-your-computer-locally), put the same name/value in a `.env` file.
 
@@ -232,7 +243,6 @@ Unfortunately, Google does not provide APIs for many of its services, and that i
 {% code title="/_data/google-scholar.yaml" %}
 ```yaml
 - gsid: ETJoidYAAAAJ
-  some-field: 123
 ```
 {% endcode %}
 

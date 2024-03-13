@@ -165,7 +165,7 @@ All fields you attach to a source (or metasource, see below) get passed through 
 # manually provide all citation details
 - title: Some Publication Title
   authors:
-    - **Steve McQueen**
+    - "**Steve McQueen**"
     - Lightning McQueen
   publisher: bioRxiv
   date: 2021-01-01

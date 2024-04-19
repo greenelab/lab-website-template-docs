@@ -62,7 +62,7 @@ Let's say we want to have a page that lists the talks we've given at various pla
 ```
 {% endcode %}
 
-5. Hmm but wait, it didn't work completely right. Only the title shows. Unfortunately, due to a limitation of Jekyll/Liquid, any new parameters that you want to pass from `data` to `component` in the list component must be explicitly named in `/_includes/list.html`. The title works because there are already other components that take that parameter name, and `title` was already included. Just add the other two like this.
+5. Hmm but wait, it didn't work completely right. Only the title shows. Unfortunately, due to a limitation of Jekyll/Liquid, any new parameters that you want to pass from `data` to `component` in the list component must be explicitly named in `/_includes/list.html`. The title works because there are built-in components that take a parameter named `title`, so it was already included. Just add the other two like this.
 
 {% code title="/_includes/list.html" %}
 ```liquid

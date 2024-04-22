@@ -19,7 +19,7 @@ You could customize this in `/_scripts/search.js` to filter any kind of item tha
 
 You can search for terms, phrases, and tags:
 
-`term1 term2 "full phrase 1" "full phrase 2" "tag: some tag" "tag: another tag"`.
+`term1 term2 "full phrase 1" "full phrase 2" "tag: some-tag" "tag: another-tag"`.
 
 Items that contain **all of the terms**, **at least one of the phrases**, and **at least one of the tags** will be considered a match. Matching is case insensitive. Tags are also insensitive to hyphens, e.g. `open science` is considered the same as `open-science`.
 

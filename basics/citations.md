@@ -95,8 +95,9 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 3. In source files, each list entry stays as-is.
 4. Metadata about the cite process is attached to each source, like which input file it originated from and which cite plugin it ran with.
 5. A full list of regular sources is compiled, with duplicates merged together by `id`.
-6. Manubot generates full citation details for each source that has an `id`.
-7. Any field originally on each source is preserved.
+6. When merging two entries, if the same field is present in both, the one that comes later in the full list overwrites the one that comes earlier (because there cannot be two keys with the same name on an dict/object).
+7. Manubot generates full citation details for each source that has an `id`.
+8. Any field originally on each source is preserved.
 
 </details>
 
@@ -192,13 +193,29 @@ You can also attach arbitrary fields. The template won't explicitly use them, bu
 {% code title="/_data/orcid.yaml" %}
 ```yaml
 - orcid: 0000-0002-4655-3773
-  some-field: 123
+  jane-doe: true
 
 # ...another author
 ```
 {% endcode %}
 
 Each ORCID gets expanded into a full list of regular sources with `id`s. Any fields you put in the original entry get copied to each source in the expanded list. This applies to the other types of metasources below as well.
+
+To conveniently and explicitly associate an ORCID with a person for filtering with the [list component](components/list.md), you can add a unique field for that person like in the example above and use a filter like this:
+
+```liquid
+{% raw %}
+{% include list.html data="citations" component="citation" filters="jane-doe: true" %}
+{% endraw %}
+```
+
+<details>
+
+<summary>Why do the filter like that?</summary>
+
+Why have the unique author be the key (e.g. `jane-doe: true`) instead of the value (e.g. `member: jane-doe`)? If you do the latter, and two people are authors on the same source,  only one of the authors will be kept (whichever is listed last). This is a result of behavior described elsewhere on this page (duplicate sources merged into one, cannot have duplicate keys on dict/object).
+
+</details>
 
 Because the cite process merges duplicate sources by `id`, you can also use the [manual override method](citations.md#manual-override) above to manually correct sources returned from metasources. You can also use the special `remove` field to ignore a source returned from a metasource, discarding it from the citations output. Example:
 

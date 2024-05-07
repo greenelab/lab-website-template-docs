@@ -39,6 +39,6 @@ The `field` is the particular field/key of the data item to check. The `value` i
 | `role: programmer, alumni: true` | `role` containing `programmer` AND `alumni` containing `true` |
 | `affiliation: ^CU$`              | `affiliation` EXACTLY equal to `CU`                           |
 | `category:`                      | no specified `category`                                       |
-| `description: .*`                | some specified/defined (or blank string) `description`        |
+| `description: .+`                | some specified/defined `description`                          |
 | `date: ^2020`                    | `date` starting with `2020`                                   |
 | `role: ^(?!pi$)`                 | `role` NOT equal to `pi`                                      |

@@ -39,7 +39,15 @@ One or two paragraphs is probably best.
 ```
 {% endcode %}
 
-<table><thead><tr><th width="199">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>Display name of team member.</td></tr><tr><td><code>image</code></td><td>URL to portrait photo of team member.</td></tr><tr><td><code>role</code></td><td>Team member's role in your organization. Determines the <a href="components/icon.md">icon</a> and default description text to show.<br><br>See <code>/_data/types.yaml</code> for what types of roles are built-in or to add your own.</td></tr><tr><td><code>description</code></td><td>Description of team member's role in your organization. Overrides any default text set from of  <code>role</code>.</td></tr><tr><td><code>aliases</code></td><td>By default, team member pages have a link at the bottom that goes to the "Research" page and searches for any papers by them. This field is a list of aliases/variations/abbreviations of the team member's name to search for.</td></tr><tr><td><code>links</code></td><td>Social media links for the team member, without any prefixes like <code>@</code>, <code>www.</code>, etc.<br><br>See <code>/_data/types.yaml</code> for what types of links are built-in or to add your own.</td></tr></tbody></table>
+<table><thead><tr><th width="199">Parameter</th><th>Description</th></tr></thead><tbody><tr><td><code>name</code></td><td>Display name of team member.</td></tr><tr><td><code>image</code></td><td>URL to portrait photo of team member.</td></tr><tr><td><code>role</code></td><td>Team member's role in your organization. Determines the <a href="components/icon.md">icon</a> and <em>default</em> description text to show.<br><br>See <code>/_data/types.yaml</code> for what types of roles are built-in or to add your own.</td></tr><tr><td><code>description</code></td><td>Description of team member's role in your organization. Overrides any default text set from of  <code>role</code>.</td></tr><tr><td><code>aliases</code></td><td>By default, team member pages have a link at the bottom that goes to the "Research" page and searches for any papers by them. This field is a list of aliases/variations/abbreviations of the team member's name to search for.</td></tr><tr><td><code>links</code></td><td>Social media links for the team member, without any prefixes like <code>@</code>, <code>www.</code>, etc.<br><br>See <code>/_data/types.yaml</code> for what types of links are built-in or to add your own.</td></tr></tbody></table>
+
+
+
+{% hint style="info" %}
+**`role` vs `description`**
+
+You can organize your team members any way you want with [list.md](components/list.md "mention") filters and by customizing `/_data/types.yaml`. However, by default, `role` is intended to be a high-level type (only a few unique ones in your organization) that you assign an icon and use for coarse list filtering (e.g. "always list PIs first, then postdocs, then undergrads"). `description` is intended for a more specific description that might be unique to each member.
+{% endhint %}
 
 ## Customize member page
 

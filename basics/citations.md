@@ -265,7 +265,11 @@ Unfortunately, Google does not provide APIs for many of its services, and that i
 
 ## Periodic updates
 
-Metasources like ORCID update over time as you publish new sources. As such, the template periodically re-runs the cite process without provocation. This will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
+Metasources like ORCID update over time as you publish new sources. To accommodate this, the template tries to automatically re-run the cite process periodically. In your repo's "▶️ Actions", see the "on schedule" workflow.
+
+Note that [GitHub imposes certain limitations on scheduled workflows](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow). You may have to manually enable the workflow, or re-enable it after a while of repo inactivity.
+
+When the workflow runs, it will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
 
 ## Cache
 

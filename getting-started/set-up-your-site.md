@@ -27,6 +27,7 @@ Once you decide which approach to take, follow the appropriate setup steps below
 4. In your repo's "▶️ Actions", find the "first time setup" workflow and [run it manually](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow). Wait for it to complete (\~30 seconds).
 5. In your repo's "⚙️ Settings", [set GitHub Pages to build/publish from](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) the `gh-pages` branch. Wait for the first build of your site to complete (\~3 minutes, multiple Actions workflows will run).
 6. Your repo should be initialized and your site should be live! Check your readme for the link.
+7. If you want to [periodic citation updates](../basics/citations.md#periodic-updates), in your repo's "▶️ Actions", find the "on schedule" workflow and [enable it](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow).
 {% endtab %}
 {% endtabs %}
 

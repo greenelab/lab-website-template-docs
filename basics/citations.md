@@ -274,7 +274,7 @@ Metasources like ORCID update over time as you publish new sources. To accommoda
 When the workflow runs, it will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
 
 {% hint style="info" %}
-Due to another [GitHub limitation](https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs), if you want to see a [pull request preview link](../getting-started/preview-your-site.md#on-github-remotely) for this, you'll have to close and reopen the pull request to trigger the preview workflow.
+Due to another [GitHub limitation](https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs), if you want to see a [pull request preview link](../getting-started/preview-your-site.md#on-github-remotely) for this, you'll have to close (_not merge_) and reopen the pull request to trigger the preview workflow.
 {% endhint %}
 
 ## Cache

@@ -9,7 +9,7 @@ Just like [editing your site](change-your-site.md), there are two ways to previe
 When you open or update a pull request on GitHub, the template will build a live preview of the changes you are making to your site. A public link to the preview will be in a comment on the pull request. This way, reviewers and editors can see the tangible result of the changes conveniently.
 
 {% hint style="info" %}
-Note: The comment on the PR will appear a little bit before (\~30 seconds) the the preview is actually finished deploying. Keep that in mind if you click on the link and see a 404 error or non-updated website.
+Note: The comment on the pull request will appear a little bit before (\~30 seconds) the the preview is actually finished deploying. Keep that in mind if you click on the link and see a 404 error or non-updated website.
 {% endhint %}
 
 The template will also tell GitHub to automatically run the [cite process](../basics/citations.md) and commit the resulting citations. This happens whenever you push to `main` or make a pull request.

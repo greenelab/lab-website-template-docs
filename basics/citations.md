@@ -267,9 +267,15 @@ Unfortunately, Google does not provide APIs for many of its services, and that i
 
 Metasources like ORCID update over time as you publish new sources. To accommodate this, the template tries to automatically re-run the cite process periodically. In your repo's "▶️ Actions", see the "on schedule" workflow.
 
-Note that [GitHub imposes certain limitations on scheduled workflows](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow). You may have to manually enable the workflow, or re-enable it after a while of repo inactivity.
+{% hint style="info" %}
+[GitHub imposes certain limitations on scheduled workflows](https://docs.github.com/en/actions/managing-workflow-runs-and-deployments/managing-workflow-runs/disabling-and-enabling-a-workflow). You may have to manually enable the workflow, or re-enable it after a while.
+{% endhint %}
 
 When the workflow runs, it will get the latest sources associated with your metasources, generate citations like normal, and open a pull request to let you review the changes before publishing them.
+
+{% hint style="info" %}
+Due to another [GitHub limitation](https://github.com/peter-evans/create-pull-request/blob/main/docs/concepts-guidelines.md#triggering-further-workflow-runs), if you want to see a [pull request preview link](../getting-started/preview-your-site.md#on-github-remotely) for this, you'll have to close and reopen the pull request to trigger the preview workflow.
+{% endhint %}
 
 ## Cache
 

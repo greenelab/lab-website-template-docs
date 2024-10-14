@@ -22,3 +22,4 @@ To install a plugin, follow [the instructions here](https://jekyllrb.com/docs/pl
 
 1. Add `- jekyll-some-plugin` under `plugins:` in your `_config.yaml` file.
 2. Add `gem "jekyll-some-plugin"` under `group :jekyll_plugins do` in your `Gemfile` file.
+3. Generate a new `Gemfile.lock` file by [previewing your site locally](../getting-started/preview-your-site.md#on-your-computer-locally).

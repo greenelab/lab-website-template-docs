@@ -2,7 +2,7 @@
 
 **Lab Website Template (LWT)** is an easy-to-use, flexible website template for labs. Spend less time worrying about managing a website and citations, and more time running your lab.
 
-<table data-view="cards" data-full-width="false"><thead><tr><th></th><th></th><th></th><th data-hidden data-card-target data-type="content-ref"></th><th data-hidden data-card-cover data-type="files"></th></tr></thead><tbody><tr><td></td><td></td><td><strong>Lab Website Template</strong><br><strong>on GitHub</strong></td><td><a href="https://github.com/greenelab/lab-website-template">https://github.com/greenelab/lab-website-template</a></td><td><a href=".gitbook/assets/github.png">github.png</a></td></tr></tbody></table>
+{% embed url="https://github.com/greene-lab/lab-website-template" fullWidth="false" %}
 
 {% hint style="success" %}
 This documentation always reflects the ✨ [LATEST VERSION](https://github.com/greenelab/lab-website-template/blob/main/CITATION.cff) of the template.

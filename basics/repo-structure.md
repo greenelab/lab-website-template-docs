@@ -10,7 +10,7 @@ Most of this structure is enforced by Jekyll. See [this page of the Jekyll docum
 
 ## Template vs. user content
 
-The most important distinction to make is between **template content** ("under-the-hood") and **user content** (for your specific website).
+The most important distinction to make is between **template content** ("under-the-hood" stuff needed for the general functioning of the template) and **user content** (stuff for your specific website).
 
 **In general**, here's how the files and folders in the template fall into these two categories. We've tried to keep these as separated as possible, within the limitations of Jekyll.
 

@@ -39,17 +39,20 @@ For example, if your `data` looked like this:
 
 # current item filter is looking at
 - id: abc
-  Some-Field-123: "abc"
+  Some-Field-123: xxx
 
 # ... another item
+- id: def
+  Some-Field-123: yyy
+  optional-field: Lorem ipsum
 ```
 
-You could make references in your `filter` like this:
+...you could make references in your `filter=""` like this:
 
 ```ruby
-# snake cased field name
+# snake_cased field name
 Some_Field
-# original field name
+# exact original field name
 item['Some-Field-123']
 # field perhaps present on other items, but not present on this item
 optional_field # treated as `nil` (null)
@@ -57,7 +60,7 @@ optional_field # treated as `nil` (null)
 
 ### Examples
 
-<table><thead><tr><th width="349">Filter expression</th><th>Show item if...</th><th>Example scenario</th></tr></thead><tbody><tr><td><code>repo</code></td><td>has some <code>repo</code> field</td><td><em>"Show my tools that have a repo link"</em></td></tr><tr><td><code>!id</code></td><td>has no <code>id</code> field</td><td><em>"Show my</em> <a href="../citations.md#manual-override"><em>manual citations</em></a><em>"</em></td></tr><tr><td><code>type == 'package' and category != 'featured'</code></td><td><code>type</code> is <code>package</code> and <code>category</code> is not <code>featured</code></td><td><em>"Show my secondary packages"</em> </td></tr><tr><td><code>role =~ /student/i</code></td><td><code>role</code> contains <code>student</code>, case-insensitive</td><td><em>"Show my students, of any level"</em></td></tr><tr><td><code>role =~ /^Senior/</code></td><td><code>role</code> starts with <code>senior</code>, case-sensitive</td><td><em>"Show my senior level members"</em></td></tr><tr><td><code>date.between?('2020', '2023')</code></td><td><code>date</code> is between <code>2020</code> and <code>2023</code> </td><td><em>"Show my papers published during COVID"</em></td></tr><tr><td><code>publisher.end_with?('Biology')</code></td><td><code>publisher</code> ends with <code>Biology</code></td><td><em>"Show my papers in major biology journals"</em></td></tr><tr><td><code>alumni ? name === 'Steve McQueen' : true</code></td><td>not <code>alumni</code> , or <code>alumni</code> where <code>name</code> is <code>Steve McQueen</code></td><td><em>"Hide my past members, unless they're super cool"</em></td></tr></tbody></table>
+<table><thead><tr><th width="349">Filter expression</th><th>Show item if...</th><th>Example scenario</th></tr></thead><tbody><tr><td><code>repo</code></td><td>has some <code>repo</code> field</td><td><em>"Show my tools that have a repo link"</em></td></tr><tr><td><code>!id</code></td><td>has no <code>id</code> field</td><td><em>"Show my</em> <a href="../citations.md#manual-override"><em>manual citations</em></a><em>"</em></td></tr><tr><td><code>type == 'package' and category != 'featured'</code></td><td><code>type</code> is <code>package</code> and <code>category</code> is not <code>featured</code></td><td><em>"Show my secondary packages"</em> </td></tr><tr><td><code>role =~ /student/i</code></td><td><code>role</code> contains <code>student</code>, case-insensitive</td><td><em>"Show my students, of any level"</em></td></tr><tr><td><code>role =~ /^Senior/</code></td><td><code>role</code> starts with <code>Senior</code>, case-sensitive</td><td><em>"Show my senior level members"</em></td></tr><tr><td><code>date.between?('2020', '2023')</code></td><td><code>date</code> is between <code>2020</code> and <code>2023</code> </td><td><em>"Show my papers published during COVID"</em></td></tr><tr><td><code>publisher.end_with?('Biology')</code></td><td><code>publisher</code> ends with <code>Biology</code></td><td><em>"Show my papers in major biology journals"</em></td></tr><tr><td><code>alumni ? name === 'Steve McQueen' : true</code></td><td>not <code>alumni</code> , or <code>alumni</code> where <code>name</code> is <code>Steve McQueen</code></td><td><em>"Hide my past members, unless they're super cool"</em></td></tr></tbody></table>
 
 {% hint style="info" %}
 References:

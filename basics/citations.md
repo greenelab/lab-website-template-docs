@@ -279,4 +279,4 @@ Due to another [GitHub limitation](https://github.com/peter-evans/create-pull-re
 
 ## Cache
 
-If you have many sources, generating the citations for all of them can take a while. To save time, the cite process keeps a time-to-live cache for Manubot/ORCID/etc. network requests. If a cached response hasn't expired, it is used instead of making a new request. To clear this, simply delete the cache file in `_cite`. You can also customize the default expire times in the Python code in `_cite`.
+If you have many sources, generating the citations for all of them can take a while. To save time, the cite process keeps a time-to-live cache for Manubot/ORCID/etc. network requests. If a cached response hasn't expired, it is used instead of making a new request. To clear this, simply delete the cache directory `_cite/.cache`. You can also customize the default expire times in the Python code in `_cite`.

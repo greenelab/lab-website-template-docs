@@ -12,7 +12,7 @@ First let's define some consistent terminology to make things easier to explain:
 
 * **source** - A paper, book, article, web page, film, or any other published item you want to cite.
 * **metasource** - A single item that lists multiple sources, like how an author's [ORCID number](https://orcid.org/) can be used to get a list of their published works.
-* **citation** - Full, detailed information about a source, like title, author(s), publisher, publish date, URL,  etc.
+* **citation** - Full, detailed information about a source, like title, author(s), publisher, publish date, URL, etc.
 
 For most content on your site, you just need change the contents of the appropriate file. Citations have a special additional step. When you add new sources or metasources to be cited, **the template has to run a special "cite process" to generate your full citations**.
 
@@ -82,7 +82,7 @@ graph LR
 3. The cite process outputs a single `citations.yaml` file in `/_data`.
 4. Display and filter citations on your site with the [list](components/list.md) and [citation](components/citation.md) components.
 
-{% hint style="info" %}
+{% hint style="danger" %}
 Do not edit `citations.yaml`! It will get overwritten each time the cite process runs. If you need to manually input or correct things, see below.
 {% endhint %}
 
@@ -101,7 +101,7 @@ Do not edit `citations.yaml`! It will get overwritten each time the cite process
 
 </details>
 
-You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like! For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal\_investigator)'s ORCID, then reserve your "Research" page for just a few special papers by various members in your lab that you want to highlight.
+You can mix and match as many sources and metasources as you want, and display them however and wherever you'd like! For example, you may want to have a "CV" page that lists all of the papers under your [PI](https://en.wikipedia.org/wiki/Principal_investigator)'s ORCID, then reserve your "Research" page for just a few special papers by various members in your lab that you want to highlight.
 
 ## Examples
 
@@ -155,7 +155,7 @@ Always provide a good thumbnail for your publications. Use a figure from the sou
 
 ### Manual override
 
-All fields you attach to a source (or metasource, see below) get passed through to the generated citation untouched. This allows you to manually input or correct details of a citation.&#x20;
+All fields you attach to a source (or metasource, see below) get passed through to the generated citation untouched. This allows you to manually input or correct details of a citation.
 
 {% code title="/_data/sources.yaml" %}
 ```yaml
@@ -204,16 +204,16 @@ Each ORCID gets expanded into a full list of regular sources with `id`s. Any fie
 To conveniently and explicitly associate an ORCID with a person for filtering with the [list component](components/list.md), you can add a unique field for that person like in the example above and use a filter like this:
 
 ```liquid
-{% raw %}
 {% include list.html data="citations" component="citation" filters="jane-doe: true" %}
-{% endraw %}
+
+
 ```
 
 <details>
 
 <summary>Why do the filter like that?</summary>
 
-Why have the unique author be the key (e.g. `jane-doe: true`) instead of the value (e.g. `member: jane-doe`)? If you do the latter, and two people are authors on the same source,  only one of the authors will be kept (whichever is listed last). This is a result of behavior described elsewhere on this page (duplicate sources merged into one, cannot have duplicate keys on dict/object).
+Why have the unique author be the key (e.g. `jane-doe: true`) instead of the value (e.g. `member: jane-doe`)? If you do the latter, and two people are authors on the same source, only one of the authors will be kept (whichever is listed last). This is a result of behavior described elsewhere on this page (duplicate sources merged into one, cannot have duplicate keys on dict/object).
 
 </details>
 

@@ -7,11 +7,9 @@ description: Colored box with icon and content
 :eye: [PREVIEW](https://greenelab.github.io/lab-website-template/testbed#alert)
 
 ```liquid
-{% raw %}
 {% capture lorem %}
 _Lorem_ **ipsum**.
 {% endcapture %}
-{% endraw %}
 
 {%
   include alert.html

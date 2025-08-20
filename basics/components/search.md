@@ -13,7 +13,7 @@ The template can dynamically (when a visitor comes to your site) filter items on
 
 By default, the only items on the page that are filtered the [card](card.md), [citation](../citations.md), and [post excerpt](post-excerpt.md) components.
 
-You could customize this in `/_scripts/search.js` to filter any kind of item that is selectable with a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS\_Selectors), for example `p` for paragraph elements.
+You could customize this in `/_scripts/search.js` to filter any kind of item that is selectable with a [CSS selector](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors), for example `p` for paragraph elements.
 
 ## How are items filtered?
 
@@ -30,9 +30,7 @@ Search words will be highlighted in the results (if they're longer than 2 charac
 You can put a search box component on the page to let visitors type in their own search:
 
 ```liquid
-{% raw %}
 {% include search-box.html %}
-{% endraw %}
 ```
 
 This also updates the URL so they can conveniently link to that page with that search.
@@ -40,9 +38,7 @@ This also updates the URL so they can conveniently link to that page with that s
 To show info about what items are being filtered, e.g. _Showing 12 of 60_, you can put a search info component on a page:
 
 ```liquid
-{% raw %}
 {% include search-info.html %}
-{% endraw %}
 ```
 
 Only visible if something is being searched.

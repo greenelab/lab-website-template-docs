@@ -9,7 +9,6 @@ description: A left or right "floated" piece of content
 A piece of floating content that the main page content will [flow around](https://developer.mozilla.org/en-US/docs/Web/CSS/float). Useful for putting a figure to the side in a long page of paragraphs.
 
 ```liquid
-{% raw %}
 {% capture content %}
   {% include figure.html ... %}
 {% endcapture %}
@@ -23,7 +22,6 @@ A piece of floating content that the main page content will [flow around](https:
 Several paragraphs of text.
 
 {% include float.html clear=true %}
-{% endraw %}
 ```
 
 <table><thead><tr><th width="136">Parameter</th><th width="436">Description</th><th>Default</th></tr></thead><tbody><tr><td><code>content</code></td><td><a href="./#arbitrary-content">Arbitrary content</a> to flow around.</td><td></td></tr><tr><td><code>flip</code></td><td>Whether to flip side of page content floats to.</td><td><code>false</code> (floats to left)</td></tr><tr><td><code>clear</code></td><td>Set to <code>true</code> to "<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/clear">stop</a>" the current float, i.e. content after this will no longer flow around the previous float component, and will instead go below it.</td><td></td></tr></tbody></table>

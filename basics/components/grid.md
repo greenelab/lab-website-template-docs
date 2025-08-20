@@ -9,7 +9,6 @@ description: A grid of items
 A list of items to arrange in a grid. Wraps on smaller screen sizes. Compared to the [cols](cols.md) component, use this when you have 3 or more individual items that are roughly the same proportions, for example for image galleries.
 
 ```
-{% raw %}
 {% capture content %}
   {% include figure.html ... %}
   {% include figure.html ... %}
@@ -17,7 +16,6 @@ A list of items to arrange in a grid. Wraps on smaller screen sizes. Compared to
   {% include figure.html ... %}
   {% include figure.html ... %}
 {% endcapture %}
-{% endraw %}
 
 {%
   include grid.html
@@ -31,7 +29,6 @@ A list of items to arrange in a grid. Wraps on smaller screen sizes. Compared to
 You can also pass plain Markdown images to this component. You may want to do this if you want to show images, such as a group of logos, without any of the styling that comes with the figure component (e.g. shadow).
 
 ```liquid
-{% raw %}
 {% capture content %}
   ![](/images/photo.png)
 
@@ -41,7 +38,6 @@ You can also pass plain Markdown images to this component. You may want to do th
 {% endcapture %}
 
 {% include grid.html content=content %}
-{% endraw %}
 ```
 
 Note the empty lines in between the images. If you don't include these, Markdown will put all the images in a single paragraph `<p>` element, and that paragraph will be the only item in the grid. Separating them with newlines puts each image in its own paragraph, and thus grid item.

@@ -13,9 +13,7 @@ Simply place the code for a component in one of your markdown files, and it will
 ```liquid
 ...some content...
 
-{% raw %}
 {% include some-component.html parameter="value" %}
-{% endraw %}
 
 ...more content...
 ```
@@ -31,7 +29,6 @@ Some component parameters allow you to pass complex, arbitrary content to them, 
 To do this, you have to use [Liquid's capture tag](https://shopify.github.io/liquid/tags/variable/#capture) first. Example:
 
 ```liquid
-{% raw %}
 {% capture some-content %}
   Some text.
   _Some_ **Markdown**.
@@ -39,5 +36,4 @@ To do this, you have to use [Liquid's capture tag](https://shopify.github.io/liq
 {% end capture %}
 
 {% include some-component.html some-param=some-content %}
-{% endraw %}
 ```

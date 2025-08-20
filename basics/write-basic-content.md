@@ -24,7 +24,7 @@ The example above works in most cases, because your site is likely to only have 
 
 <summary>Advanced</summary>
 
-You can of course use any [standard path syntax](https://www.w3schools.com/html/html\_filepaths.asp):
+You can of course use any [standard path syntax](https://www.w3schools.com/html/html_filepaths.asp):
 
 ```markdown
 Page/photo located in same folder as current page (i.e. a sub-page)
@@ -50,9 +50,7 @@ Manually prepend baseurl
 
 Jekyll automatically prepends the right baseurl
 [Link text]({{ "/page/sub-page" | relative_url }})
-[Link text]({% raw %}
-{% link page/sub-page/index.md %}
-{% endraw %})
+[Link text]({% link page/sub-page/index.md %})
 ```
 
 </details>
@@ -81,9 +79,7 @@ You can still link to an external, absolute URL, e.g. `https://some-website.org/
 <mark style="color:red;">**✘ BAD**</mark>
 
 ```liquid
-{% raw %}
 {% include some-component.html link="../images/photo.jpg" %}
-{% endraw %}
 ```
 
 ```markdown
@@ -126,11 +122,9 @@ Text with extra blank lines above and below
 ```markdown
 <!-- a comment in HTML -->
 
-{% raw %}
 {% comment %}
 A comment in Liquid
 {% endcomment %}
-{% endraw %}
 ```
 
 ## **Lists**

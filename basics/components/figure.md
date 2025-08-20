@@ -25,13 +25,11 @@ description: An image with caption and link
 Example of using with the [section](section.md) component to make a full width banner:
 
 ```liquid
-{% raw %}
 {% include section.html size="full" %}
 
 {% include figure.html image="images/banner.jpg" width="100%" %}
 
 {% include section.html %}
-{% endraw %}
 
 Continued content
 ```
